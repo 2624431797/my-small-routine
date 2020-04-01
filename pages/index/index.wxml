@@ -1,13 +1,82 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<wxs src="../../api/filters.wxs" module="filters" />
+
+<scroll-view 
+  scroll-y='true'  
+  style="height: 100%"
+  bindscroll="handlerScrollView"
+  bindscrolltolower="handlerScrollBottom"
+>
+  <view class="container">
+    <Banner />
+
+    <view class="{{'navbarbox ' + (scrollTop >= 210 ? 'navbarbox-active' : '')}}">
+      <view class="navbar">
+          <view 
+            data-type="nowing" 
+            bindtap="handlerChangeType" 
+            class="{{'navbar-item ' + (type === 'nowing' ? 'navbar-item-active' : '')}}"
+          >
+              <text class="navbar-item-txt">正在上映</text>
+          </view>
+          <view 
+            data-type="coming" 
+            bindtap="handlerChangeType" 
+            class="{{'navbar-item ' + (type === 'coming' ? 'navbar-item-active' : '')}}"
+          >
+              <text class="navbar-item-txt">即将上映</text>
+          </view>
+      </view>
+    </view>
+    
+    <view class="{{'movielistbox ' + (scrollTop >= 210 ? 'movielistbox-active' : '')}}">
+      <view 
+        class="list-content" 
+        wx:for="{{movielist}}" 
+        wx:key="id"
+      >
+        <view class="list-img">
+          <image src="{{item.imgUrl}}" />
+        </view>
+        <view class="list-container">
+          <view class="list-pic">
+            <image src="{{item.imgurl}}" />
+          </view>
+          <view class="list-cell">
+            <view class="list-sub-director">
+              导演:
+              <text wx:for="{{item.director}}" wx:key="id"> {{item.name}} </text>
+            </view>
+            <view class="list-sub-actor">
+              演员:
+              <text wx:for="{{item.actor}}" wx:key="id"> {{item.name}} </text>
+            </view>
+            <view class="list-sub-average">
+              <text>想看: {{filters.handlerShowNum(item.rating.average)}} 人</text>
+            </view>
+            <view class="list-sub-pubdate">
+              <text>{{item.country}} | {{item.duration}} 分钟</text>
+            </view>
+            <view wx:if="{{type === 'nowing'}}" class="list-sub-count">
+              <text>评分: {{item.rating.count}} 分</text>
+            </view>
+            <view wx:else class="list-sub-comdate">
+              <text>上映日期: {{filters.handlerShowTimeYM(item.time)}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="list-tit">
+          <view class="list-sub-tit">
+            <text>{{item.title}}</text>
+          </view>
+          <view class="list-sub-btn">
+            <navigator class="list-sub-btn-now" wx:if="{{type === 'nowing'}}">已售</navigator>
+            <navigator class="list-sub-btn-com" wx:else>预售</navigator>
+          </view>
+        </view>
+      </view>
+      <view class="list-no-more" wx:if="{{!hasMore}}">
+        <text>没有更多数据啦...</text>
+      </view>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view>
+</scroll-view>

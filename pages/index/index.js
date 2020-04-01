@@ -1,54 +1,62 @@
-//index.js
-//获取应用实例
-const app = getApp()
+import { requestPost } from "../../services/index"
 
 Page({
   data: {
-    motto: 'Hello',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    movielist: [],
+    status: 0,
+    page: 1,
+    limit: 5,
+    type: "nowing",
+    isLoading: false,   //默认不加载数据
+    hasMore: true,      //默认有更多数据
+    scrollTop: 0
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+  //切换类型
+  handlerChangeType(e){
+    let type = e.currentTarget.dataset.type
+    if(type === this.data.type) return false
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      movielist: [],
+      page: 1,
+      type,
+      hasMore: true    
     })
+    this.handlerInitMovieList()
+  },
+  //获取数据
+  handlerInitMovieList() {
+    this.setData({isLoading: true})   //加载数据
+    wx.showLoading({
+      title: '加载中'
+    })
+    let para = { page: this.data.page, limit: this.data.limit}
+    requestPost(
+      `/api/v1/GetMovieList/${this.data.type}`, para
+      ).then(res => {
+      let {page, limit} = this.data
+      this.setData({
+        movielist: this.data.movielist.concat(res.data.userlist),
+        page: ++page,
+        isLoading: false,
+        hasMore: !(page > res.data.total / limit)
+      })
+      wx.hideLoading()
+    })
+  },
+  //scroll滚动
+  handlerScrollView(e){
+    this.setData({
+      scrollTop: e.detail.scrollTop
+    })  
+  },
+  //scroll触底
+  handlerScrollBottom: function(){
+    let {isLoading, hasMore} = this.data
+    if(isLoading || !hasMore) return false
+    this.handlerInitMovieList()
+  },
+  //初始化
+  onLoad: function(){
+    this.handlerInitMovieList()
   }
 })

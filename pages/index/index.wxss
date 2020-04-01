@@ -1,21 +1,139 @@
-/**index.wxss**/
-.userinfo {
+.navbarbox {
+  background: #fff;
+}
+
+.navbarbox-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.navbarbox .navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.navbarbox .navbar .navbar-item {
+  width: 50%;
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+}
+.navbarbox .navbar .navbar-item .navbar-item-txt {
+  color: #333;
+  font-weight: bold;
+  padding: 0 10rpx 14rpx 10rpx;
+  border-bottom: 4rpx solid transparent;
+}
+.navbarbox .navbar .navbar-item-active .navbar-item-txt {
+  color: #ff5f16!important;
+  border-bottom: 4rpx solid #ff5f16!important;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.movielistbox {
+  width: 100%;
+  height: 100%;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.movielistbox-active {
+  margin-top: 88rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.list-content {
+  padding: 16rpx 20rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+
+.list-img {
+  width: 100%;
+  height: 360rpx;
+  margin-bottom: 20rpx;
+}
+
+.list-container {
+  height: 300rpx;
+  margin-bottom: 10rpx;
+}
+
+.list-pic {
+  float: left;
+  width: 200rpx;
+  height: 300rpx;
+}
+
+.list-cell {
+  float: right;
+  width: 480rpx;
+  color: #888;
+  line-height: 60rpx;
+}
+
+.list-sub-director {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-sub-actor {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-sub-count {
+  font-weight: bold;
+  color: #faae21;
+}
+
+.list-sub-comdate{
+  font-weight: bold;
+  color: #3c9fe6;
+}
+
+.list-tit {
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+  justify-content: space-between;
+  line-height: 80rpx;
+}
+
+.list-sub-tit {
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+  margin-left: 20rpx;
+}
+
+.list-sub-btn-now {
+  display: inline-block;
+  width: 176rpx;
+  height: 68rpx;
+  margin-right: 50rpx;
+  text-align: center;
+  line-height: 68rpx;
+  color: #fff;
+  background-color: #ff5f16;
+  border-radius: 8rpx;
+}
+
+.list-sub-btn-com {
+  display: inline-block;
+  width: 176rpx;
+  height: 68rpx;
+  margin-right: 50rpx;
+  text-align: center;
+  line-height: 68rpx;
+  color: #fff;
+  background-color: #3c9fe6;
+  border-radius: 8rpx;
+}
+
+.list-no-more{
+  width: 100%;
+  height: 100rpx;
+  color: #666;
+  text-align: center;
+  line-height: 100rpx;
 }

@@ -1,0 +1,58 @@
+//人数计算
+var handlerShowNum = function(n){
+  if (n >= 10000) {
+    n = n / 10000
+    n = n.toFixed(1)
+    n = n + "万"
+  }
+  return n
+}
+
+//时间换算
+var handlerShowTimeYM = function(value){
+  var time = getDate(value);
+  var year = time.getFullYear();
+  var month = time.getMonth() + 1;
+  var date = time.getDate();
+  var hour = time.getHours();
+  var minute = time.getMinutes();
+  var second = time.getSeconds();
+  month = month < 10 ? "0" + month : month;
+  date = date < 10 ? "0" + date : date;
+  hour = hour < 10 ? "0" + hour : hour;
+  minute = minute < 10 ? "0" + minute : minute;
+  second = second < 10 ? "0" + second : second;
+  return year + "年" + month + "月"
+}
+
+//
+var getWeek = function (week) {
+  switch (week) {
+    case 5:
+      return "星期五";
+    case 4:
+      return "星期四";
+    case 3:
+      return "星期三";
+    case 2:
+      return "星期二";
+    case 1:
+      return "星期1";
+    case "6":
+      return "星期六";
+    case 0:
+      return "星期日";
+  }
+}
+var formatDate = function (time) {
+  var date = getDate(time * 1000)
+  var month = date.getMonth() + 1
+  var day = date.getDate()
+  var week = date.getDay()
+  return getWeek(week) + " " + month + "月" + day + "号"
+}
+
+module.exports = {
+  handlerShowNum: handlerShowNum
+  handlerShowTimeYM: handlerShowTimeYM
+}

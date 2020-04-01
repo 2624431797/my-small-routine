@@ -1,14 +1,46 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/Cinema/index",
+    "pages/Mation/index",
+    "pages/Mine/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#ff5f16",
+    "navigationBarTitleText": "影院影片",
+    "navigationBarTextStyle": "white"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#ff5f16",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推荐",
+        "iconPath": "assets/icons/movie.png",
+        "selectedIconPath": "assets/icons/movie-active.png"
+      },
+      {
+        "pagePath": "pages/Cinema/index",
+        "text": "影院",
+        "iconPath": "assets/icons/cinema.png",
+        "selectedIconPath": "assets/icons/cinema-active.png"
+      },
+      {
+        "pagePath": "pages/Mation/index",
+        "text": "资讯",
+        "iconPath": "assets/icons/mation.png",
+        "selectedIconPath": "assets/icons/mation-active.png"
+      },
+      {
+        "pagePath": "pages/Mine/index",
+        "text": "我的",
+        "iconPath": "assets/icons/mine.png",
+        "selectedIconPath": "assets/icons/mine-active.png"
+      }
+    ]
+  }
 }

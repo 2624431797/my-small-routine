@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "影片",
+  "usingComponents": {
+    "Banner" : "../../components/Banner"
+  }
 }
