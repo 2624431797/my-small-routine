@@ -1,0 +1,8 @@
+<view class="moviedetailbtnbox">
+    <view class="moviedetailbtn-container">
+        <navigator 
+            class="moviedetailbtn-container-btn" 
+            url=""
+        >特惠选票</navigator>
+    </view>
+</view>

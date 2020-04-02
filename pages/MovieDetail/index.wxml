@@ -1,0 +1,110 @@
+<wxs src="../../api/filters.wxs" module="filters" />
+
+<view class="moviedetailbox">
+    <view wx:if="{{movielist.length == 0}}"></view>
+    <view wx:else class="moviedetail">
+        <view class="moviedetail-top">
+            <view class="moviedetail-top-cover">
+                <image wx:if="{{movielist.img}}" src="{{movielist.img}}" alt="加载失败"></image>
+            </view>
+            <view class="moviedetail-top-above">
+                <view class="moviedetail-top-above-left">
+                    <image wx:if="{{movielist.img}}" src="{{movielist.img}}" alt="加载失败"></image>
+                </view>
+                <view class="moviedetail-top-above-right">
+                    <text class="moviedetail-top-above-right-title">{{movielist.title}}</text>
+                    <text class="moviedetail-top-above-right-english">{{movielist.english_title}}</text>
+                    <text class="moviedetail-top-above-right-count">{{movielist.rating.count}} 分</text>
+                    <text class="moviedetail-top-above-right-genres">{{movielist.genres}}</text>
+                    <text class="moviedetail-top-above-right-subion">{{movielist.country}} | {{movielist.duration}} 分钟</text>
+                    <text class="moviedetail-top-above-right-year">{{filters.handlerShowTimeYM(movielist.year)}} 上映</text>
+                </view>
+            </view>
+        </view>
+        <view class="moviedetail-middle">
+            <view class="moviedetail-mid-txt">
+                <text>{{movielist.title}}</text>
+                <text>{{movielist.imax}}</text>
+                <text>{{filters.handlerShowNum(movielist.rating.average)}} 想看</text>
+            </view>
+            <view class="moviedetail-mid-paragraph">
+                <text>剧情简介:</text>
+                <text>{{movielist.paragraph}}</text>
+            </view>
+        </view>
+        <view class="moviedetail-bottom">
+            <view class="moviedetail-bot-director">
+                <text>演职导演:</text>
+                <swiper 
+                    class="moviedetail-bot-actor-swiper"
+                    display-multiple-items="1"
+                    duration="1000"
+                >
+                    <view 
+                        wx:for="{{movielist.director}}"
+                        wx:key="id"
+                    >
+                        <swiper-item class="moviedetail-bot-actor-swiper-item">
+                            <image wx:if="{{item.director_img}}" src="{{item.director_img}}" alt="加载失败"></image>
+                            <text>{{item.name}}</text>
+                        </swiper-item>
+                    </view>
+                </swiper>
+            </view>
+            <view class="moviedetail-bot-actor">
+                <text>演职演员:</text>
+                <swiper 
+                    class="moviedetail-bot-actor-swiper"
+                    display-multiple-items="4"
+                    duration="1000"
+                >
+                    <view 
+                        wx:for="{{movielist.actor}}"
+                        wx:key="id"
+                    >
+                        <swiper-item class="moviedetail-bot-actor-swiper-item">
+                            <image wx:if="{{item.actor_img}}" src="{{item.actor_img}}" alt="加载失败"></image>
+                            <text>{{item.name}}</text>
+                        </swiper-item>
+                    </view>
+                </swiper>
+            </view>
+            <div class="moviedetail-bot-still">
+                <text>视频剧照:</text>
+                <swiper 
+                    class="moviedetail-bot-still-banner"
+                    display-multiple-items="2"
+                    duration="1000"
+                >
+                    <view 
+                        wx:for="{{movielist.still}}"
+                        wx:key="id"
+                    >
+                        <swiper-item class="moviedetail-bot-actor-swiper-item">
+                            <image wx:if="{{item.still_img}}" src="{{item.still_img}}" alt="加载失败"></image>
+                        </swiper-item>
+                    </view>
+                </swiper>
+            </div>
+        </view>
+        <view class="moviedetail-comment">
+            <text>评论:</text>
+            <ul>
+                <li 
+                    wx:for="{{movielist.comment}}" 
+                    wx:key="id"
+                >
+                    <view class="moviedetail-com-left">
+                        <image wx:if="{{item.img}}" src="{{item.img}}" alt="加载失败"></image>
+                    </view>
+                    <view class="moviedetail-com-right">
+                        <b>{{item.name}}</b>
+                        <i>{{item.summary}}</i>
+                        <span>{{filters.handlerShowTime(item.time)}}</span>
+                    </view>
+                </li>
+            </ul>
+        </view>
+        <MovieDetailBtn />
+    </view>
+</view>

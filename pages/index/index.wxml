@@ -69,8 +69,16 @@
             <text>{{item.title}}</text>
           </view>
           <view class="list-sub-btn">
-            <navigator class="list-sub-btn-now" wx:if="{{type === 'nowing'}}">已售</navigator>
-            <navigator class="list-sub-btn-com" wx:else>预售</navigator>
+            <navigator 
+              class="list-sub-btn-now"
+              wx:if="{{type === 'nowing'}}"
+              url="/pages/MovieDetail/index?id={{item.id}}"
+            >已售</navigator>
+            <navigator 
+              class="list-sub-btn-com" 
+              wx:else
+              url="/pages/MovieDetail/index?id={{item.id}}"
+            >预售</navigator>
           </view>
         </view>
       </view>

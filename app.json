@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/Cinema/index",
     "pages/Mation/index",
-    "pages/Mine/index"
+    "pages/Mine/index",
+    "pages/MovieDetail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

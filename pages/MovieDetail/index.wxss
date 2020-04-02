@@ -1,0 +1,191 @@
+.moviedetailbox {
+  background: #fff;
+}
+.moviedetailbox .moviedetail {
+  width: 100%;
+  background-color: #326665;
+}
+.moviedetailbox .moviedetail .moviedetail-top {
+  position: relative;
+  height: 440rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-cover {
+  position: absolute;
+  width: 100%;
+  height: 440rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-above {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 440rpx;
+  background: rgba(0, 0, 0, 0.55);
+}
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-above .moviedetail-top-above-left {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-above .moviedetail-top-above-left image {
+  width: 240rpx;
+  height: 380rpx;
+  border-radius: 10px;
+}
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-above .moviedetail-top-above-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 56rpx;
+  color: #fff;
+}
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-above .moviedetail-top-above-right .moviedetail-top-above-right-title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-above .moviedetail-top-above-right .moviedetail-top-above-right-english {
+  font-size: 24rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-above .moviedetail-top-above-right .moviedetail-top-above-right-count {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fc0;
+}
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-above .moviedetail-top-above-right .moviedetail-top-above-right-genres,
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-above .moviedetail-top-above-right .moviedetail-top-above-right-subion,
+.moviedetailbox .moviedetail .moviedetail-top .moviedetail-top-above .moviedetail-top-above-right .moviedetail-top-above-right-year {
+  font-size: 24rpx;
+  color: #ccc;
+}
+.moviedetailbox .moviedetail .moviedetail-middle {
+  padding: 32rpx 36rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-middle .moviedetail-mid-txt {
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-bottom: 20rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-middle .moviedetail-mid-txt text:nth-child(1) {
+  float: left;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fff;
+}
+.moviedetailbox .moviedetail .moviedetail-middle .moviedetail-mid-txt text:nth-child(2) {
+  float: left;
+  padding: 0 4rpx;
+  margin-left: 20rpx;
+  font-size: 20rpx;
+  color: #fff;
+  border-radius: 4rpx;
+  background: #d2d6dc;
+}
+.moviedetailbox .moviedetail .moviedetail-middle .moviedetail-mid-txt text:nth-child(3) {
+  float: right;
+  font-size: 32rpx;
+  font-style: italic;
+  color: #ffb232;
+}
+.moviedetailbox .moviedetail .moviedetail-middle .moviedetail-mid-paragraph text:first-child {
+  display: block;
+  color: #fff;
+  margin-bottom: 10rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-middle .moviedetail-mid-paragraph text:last-child {
+  display: block;
+  text-indent: 56rpx;
+  color: #fff;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom {
+  padding: 32rpx 36rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-director,
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-actor {
+  font-size: 28rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-director text,
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-actor text {
+  display: block;
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-director .moviedetail-bot-actor-swiper .moviedetail-bot-actor-swiper-item,
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-actor .moviedetail-bot-actor-swiper .moviedetail-bot-actor-swiper-item {
+  width: 170rpx!important;
+  height: 240rpx!important;
+  overflow: visible!important;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-director .moviedetail-bot-actor-swiper .moviedetail-bot-actor-swiper-item image,
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-actor .moviedetail-bot-actor-swiper .moviedetail-bot-actor-swiper-item image {
+  width: 164rpx!important;
+  height: 240rpx;
+  background: #fff;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-director .moviedetail-bot-actor-swiper text,
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-actor .moviedetail-bot-actor-swiper text {
+  margin-top: 14rpx;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-still {
+  font-size: 28rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-still text {
+  display: block;
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-still .moviedetail-bot-still-banner {
+  height: 240rpx;
+  overflow: hidden;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-still .moviedetail-bot-still-banner .moviedetail-bot-actor-swiper-item {
+  width: 360rpx;
+  height: 240rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-still .moviedetail-bot-still-banner .moviedetail-bot-actor-swiper-item image {
+  width: 330rpx;
+  height: 240rpx;
+  background: #fff;
+}
+.moviedetailbox .moviedetail .moviedetail-comment {
+  border-radius: 40rpx 40rpx 0 0;
+  background: #fff;
+  margin-bottom: 120rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-comment text {
+  height: 120rpx;
+  padding-left: 40rpx;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+.moviedetailbox .moviedetail .moviedetail-comment ul li {
+  display: flex;
+  padding: 32rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-comment ul li .moviedetail-com-left {
+  margin-right: 32rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-comment ul li .moviedetail-com-left image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-top: 20rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-comment ul li .moviedetail-com-right {
+  display: flex;
+  flex-direction: column;
+}
+.moviedetailbox .moviedetail .moviedetail-comment ul li .moviedetail-com-right b {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.moviedetailbox .moviedetail .moviedetail-comment ul li .moviedetail-com-right i {
+  margin-bottom: 5px;
+}
+.moviedetailbox .moviedetail .moviedetail-comment ul li .moviedetail-com-right span {
+  font-size: 12px;
+}
