@@ -32,7 +32,12 @@
                 <text>{{movielist.paragraph}}</text>
             </view>
         </view>
-        <view class="moviedetail-bottom">
+        <view class="moviedetail-bottom" animation="{{animate}}">
+            <view class="moviedetail-bot-toggle">
+                <view bindtap="handlerTogger" class="{{(animateFlag ? 'moviedetail-bot-toggle-active' : '')}}">
+                    <image src="../../assets/icons/toggle.png"></image>
+                </view>
+            </view>
             <view class="moviedetail-bot-director">
                 <text>演职导演:</text>
                 <swiper 
@@ -87,7 +92,7 @@
                 </swiper>
             </div>
         </view>
-        <view class="moviedetail-comment">
+        <view class="moviedetail-comment" animation="{{animate}}">
             <text>评论:</text>
             <ul>
                 <li 

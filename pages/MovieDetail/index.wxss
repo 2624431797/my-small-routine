@@ -98,6 +98,21 @@
 }
 .moviedetailbox .moviedetail .moviedetail-bottom {
   padding: 32rpx 36rpx;
+  background-color: #326665;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-toggle {
+  display: flex;
+  width: 100%;
+  height: 40rpx;
+  justify-content: center;
+  align-items: center;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-toggle view {
+  width: 40rpx;
+  height: 20rpx;
+}
+.moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-toggle .moviedetail-bot-toggle-active {
+  transform: rotate(180deg);
 }
 .moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-director,
 .moviedetailbox .moviedetail .moviedetail-bottom .moviedetail-bot-actor {
