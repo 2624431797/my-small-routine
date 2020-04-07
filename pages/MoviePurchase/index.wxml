@@ -1,0 +1,55 @@
+<view class="moviepurchasebox">
+    <view class="moviepurchase">
+        <!-- 毛玻璃开始 -->
+        <view class="moviepurchase-bannerbox">
+            <!-- 城市部分开始 -->
+            <view class="moviepurasecity">
+                <view class="moviepurasecity-left">
+                    <image src="../../assets/icons/weizhi.png" />
+                    <text>潍坊</text>
+                </view>
+                <view class="moviepurasecity-right">
+                    <i class="iconfont icon-kefu" />
+                </view>
+            </view>
+            <!-- 城市部分结束 -->
+            <!-- 遮罩开始 -->
+            <view class="moviepurchase-banner-cover">
+                <image src="{{coverImg}}" />
+            </view>
+            <!-- 遮罩结束 -->
+            <!-- Swiper开始 -->
+            <view class="moviepurchase-banner">
+                <swiper 
+                    class="moviepurchase-banner-swiper"
+                    bindchange="handlerBannerChange"
+                    previous-margin="130px"
+                    next-margin="110px"
+                >
+                    <block wx:for="{{bannerlist}}" wx:key="id" >
+                        <swiper-item class="moviepurchase-banner-item">
+                            <view class="{{'moviepurchase-banner-slide ' + (swiperIndex == index ? 'moviepurchase-banner-slide-active' : '')}}">
+                                <image class="moviepurchase-banner-image" src="{{item.imgUrl}}" />
+                            </view>
+                        </swiper-item>
+                    </block>
+                </swiper>
+            </view>
+            <!-- Swiper结束 -->
+            <!-- 卡片开始 -->
+            <view class="moviepurchase-card">
+                <view class="moviepurchasecard-tit">
+                    <span>{{movielist.title}}</span>
+                    <b>{{movielist.rating.count}} 分</b>
+                </view>
+                <view class="moviepurchasecard-sub">
+                    <i>{{movielist.country}}</i>
+                    <span>{{movielist.genres}}</span>
+                    <b>{{movielist.duration}} 分钟</b>
+                </view>
+            </view>
+            <!-- 卡片结束 -->
+        </view>
+        <!-- 毛玻璃开始 -->
+    </view>
+</view>

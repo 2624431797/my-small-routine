@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "",
   "usingComponents": {
-    "MovieDetailBtn" : "../../components/MovieDetailBtn"
+    "MovieDetailBtn" : "../../components/MovieDetail/MovieDetailBtn"
   }
 }

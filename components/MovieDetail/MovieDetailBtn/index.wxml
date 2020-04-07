@@ -2,7 +2,7 @@
     <view class="moviedetailbtn-container">
         <navigator 
             class="moviedetailbtn-container-btn" 
-            url=""
+            url="/pages/MoviePurchase/index?id={{movieId}}"
         >特惠选票</navigator>
     </view>
 </view>

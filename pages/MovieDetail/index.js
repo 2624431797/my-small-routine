@@ -16,6 +16,7 @@ Page({
         movielist: res.data.userlist
       })
       wx.hideNavigationBarLoading()
+      wx.setStorageSync('movieTitle', res.data.userlist.title)
       wx.setNavigationBarTitle({
         title: res.data.userlist.title
       })
@@ -48,11 +49,6 @@ Page({
     this.setData({
       animate: animation.export()
     })
-  },
-  handlerRealm(){
-    const approval = window.location.hash
-    const billCode = approval.split("/")
-    this.realm = billCode[2]
   },
   onLoad: function(options){
     this.handlerInitMovieList(options.id)

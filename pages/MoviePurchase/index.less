@@ -1,0 +1,109 @@
+@import "../../public/font/iconfont.wxss";
+
+.moviepurchasebox{
+    .moviepurchase{
+        /* 毛玻璃开始 */
+        .moviepurchase-bannerbox{
+            position: relative;
+            /* 城市部分开始 */
+            .moviepurasecity{
+                display: flex;
+                height: 80rpx;
+                justify-content: space-between;
+                padding: 0 32rpx;
+                line-height: 80rpx;
+                background: #fff;
+                .moviepurasecity-left{
+                    image{
+                        display: inline-block;
+                        width: 52rpx;
+                        height: 52rpx;
+                    }
+                    text{
+                        display: inline-block;
+                        margin-left: 20rpx;
+                        font-weight: bold;
+                    }
+                }
+                .moviepurasecity-right{
+                    i{
+                        font-size: 48rpx;
+                        color: #333;
+                        margin-right: 24rpx;
+                    }
+                }
+            }
+            /* 城市部分结束 */
+            /* 遮罩开始 */
+            .moviepurchase-banner-cover{
+                position: absolute;
+                width: 100%;
+                height: 250px;
+                filter: blur(20px);
+                z-index: -1;
+            }
+            /* 遮罩结束 */
+            /* Swiper开始 */
+            .moviepurchase-banner{
+                position: relative;
+                height: 500rpx;
+                .moviepurchase-banner-swiper{
+                    position: absolute;
+                    height: 345rpx;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    .moviepurchase-banner-item{
+                        width: 230rpx;
+                        height: 345rpx;
+                        margin-right: 15px;
+                        .moviepurchase-banner-slide{
+                            width: 230rpx;
+                            height: 345rpx;
+                            transform: scale(.8);
+                            transition: all .3s ease;
+                        }
+                        .moviepurchase-banner-slide-active{
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+            /* Swiper结束 */
+            /* 卡片开始 */
+            .moviepurchase-card{
+                padding: 32rpx 56rpx;
+                margin-bottom: 20rpx;
+                border-bottom: 2rpx solid #dedede;
+                background: #fff;
+                .moviepurchasecard-tit{
+                    height: 60rpx;
+                    line-height: 60rpx;
+                    span{
+                        float: left;
+                        color: #191a1b;
+                        font-size: 36rpx;
+                        font-weight: bold;
+                    }
+                    b{
+                        float: right;
+                        font-size: 36rpx;
+                        font-style: italic;
+                        color: #ffb232;
+                    }
+                }
+                .moviepurchasecard-sub{
+                    display: flex;
+                    justify-content: space-between;
+                    line-height: 64rpx;
+                    text-align: center;
+                    color: #797d82;
+                }
+            }
+            /* 卡片结束 */
+        }
+        /* 毛玻璃结束 */
+    }
+}

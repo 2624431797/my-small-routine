@@ -4,7 +4,8 @@
     "pages/Cinema/index",
     "pages/Mation/index",
     "pages/Mine/index",
-    "pages/MovieDetail/index"
+    "pages/MovieDetail/index",
+    "pages/MoviePurchase/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

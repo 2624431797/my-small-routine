@@ -110,6 +110,6 @@
                 </li>
             </ul>
         </view>
-        <MovieDetailBtn />
+        <MovieDetailBtn movieId="{{movielist.id}}" />
     </view>
 </view>
