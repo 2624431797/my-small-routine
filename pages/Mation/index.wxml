@@ -1,2 +1,37 @@
-<!--pages/Mation/index.wxml-->
-<text>pages/Mation/index.wxml</text>
+<view class="mationbox">
+    <view class="mation">
+        <MationBanner />
+        
+        <view class="mationlistbox">
+            <view class="mationlist">
+                <view 
+                    class="mationlist-content"
+                    wx:for="{{mationlist}}"
+                    wx:key="id"
+                >
+                    <navigator url="/pages/MationDetail/index?id={{item.id}}">
+                        <view class="mationlist-item">
+                            <view class="mationlist-list">
+                                <text>《{{item.title}}》</text>
+                                <view>{{item.paragraph}}</view>
+                                <view class="mationlist-subion">
+                                    <i>{{item.status}}|{{item.area}}</i>
+                                    <b>{{item.name}}</b>
+                                </view>
+                            </view>
+                            <view class="mationlist-img">
+                                <image src="{{item.img}}" />
+                            </view>
+                        </view>
+                        <view class="mationlist-image">
+                            <image src="../../assets/images/mation.jpg" />
+                        </view>
+                    </navigator>
+                </view>
+                <view class="list-no-more" wx:if="{{!hasMore}}">
+                    <text>没有更多数据啦...</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

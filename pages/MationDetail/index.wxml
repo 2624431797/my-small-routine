@@ -1,0 +1,74 @@
+<wxs src="../../api/filters.wxs" module="filters" />
+
+<view class="mationdetailbox">
+    <view class="mationdetail">
+        <view class="mationdetailcard">
+            <view class="mationdetailcard-title">
+                <p>《 {{mationlist.title}} 》</p>
+                <span>{{filters.handlerShowTimeYMD(mationlist.time)}}</span>
+            </view>
+            <view class="mationdetailcard-container">
+                <b></b>
+                <view class="mationdetailcard-paragraph1">
+                    <span>{{mationlist.paragraph1}}</span>
+                </view>
+                <b></b>
+                <view class="mationdetailcard-bigimg">
+                    <image src="{{mationlist.bigImg1}}" />
+                </view>
+                <b></b>
+                <view class="mationdetailcard-paragraph2">
+                    <span>{{mationlist.paragraph2}}</span>
+                </view>
+                <b></b>
+                <view class="mationdetailcard-smaimg">
+                    <image src="{{mationlist.smaImg1}}" />
+                </view>
+                <b></b>
+                <view class="mationdetailcard-paragraph3">
+                    <span>{{mationlist.paragraph3}}</span>
+                </view>
+                <b></b>
+                <view class="mationdetailcard-bigimg">
+                    <image src="{{mationlist.bigImg2}}" />
+                </view>
+                <b></b>
+                <view class="mationdetailcard-paragraph3">
+                    <span>{{mationlist.paragraph4}}</span>
+                </view>
+                <b></b>
+                <view class="mationdetailcard-bigimg">
+                    <image src="{{mationlist.bigImg3}}" />
+                </view>
+                <b></b>
+                <view class="mationdetailcard-paragraph3">
+                    <span>{{mationlist.paragraph5}}</span>
+                </view>
+                <b></b>
+                <view class="mationdetailcard-smaimg">
+                    <image src="{{mationlist.smaImg2}}" />
+                </view>
+                <b></b>
+                <view class="mationdetailcard-paragraph3">
+                    <span>{{mationlist.paragraph6}}</span>
+                </view>
+                <b></b>
+                <view class="mationdetailcard-bigimg">
+                    <image src="{{mationlist.bigImg4}}" />
+                </view>
+            </view>
+            <view class="mationdetailcard-link">
+                <b></b>
+                <view class="mationdetailcard-link-img">
+                    <image src="../../assets/images/640.gif" />
+                    <view>
+                        <a href="/">立即购票</a>
+                    </view>
+                </view>
+                <b></b>
+                <i>[文章图片素材来自网络，若有侵权，请联系我方删除。]</i>
+                <b></b>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+.mationbannerbox {
+  background: #fff;
+  padding: 20rpx;
+}
+.mationbannerbox .mationbanner {
+  height: 400rpx;
+}

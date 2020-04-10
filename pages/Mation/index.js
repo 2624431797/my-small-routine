@@ -1,66 +1,38 @@
-// pages/Mation/index.js
+import { requestPost } from "../../services/index"
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    page: 1,
+    limit: 6,
+    isLoading: false,   //默认不加载数据
+    hasMore: true,      //默认有更多数据
+    mationlist: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad(options) {
+    this.handlerGetInit()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onReachBottom(){
+    let {isLoading, hasMore} = this.data
+    if(isLoading || !hasMore) return false
+    this.handlerGetInit()
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handlerGetInit(){
+    this.setData({isLoading: true})   //加载数据
+    wx.showLoading({
+      title: '加载中'
+    })
+    let para = { page: this.data.page, limit: this.data.limit}
+    requestPost(
+      `/api/z1/GetMationList`, para
+      ).then(res => {
+      let {page, limit} = this.data
+      this.setData({
+        mationlist: this.data.mationlist.concat(res.data.mationlist),
+        page: ++page,
+        isLoading: false,
+        hasMore: !(page > res.data.total / limit)
+      })
+      wx.hideLoading()
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

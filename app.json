@@ -5,7 +5,8 @@
     "pages/Mation/index",
     "pages/Mine/index",
     "pages/MovieDetail/index",
-    "pages/MoviePurchase/index"
+    "pages/MoviePurchase/index",
+    "pages/MationDetail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -13,7 +14,6 @@
     "navigationBarTitleText": "影院影片",
     "navigationBarTextStyle": "white"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "color": "#333333",

@@ -1,3 +1,5 @@
+<wxs src="../../api/filters.wxs" module="filters" />
+
 <view class="moviepurchasebox">
     <view class="moviepurchase">
         <!-- 毛玻璃开始 -->
@@ -37,7 +39,10 @@
             </view>
             <!-- Swiper结束 -->
             <!-- 卡片开始 -->
-            <view class="moviepurchase-card">
+            <view class="moviepurchasecard">
+                <view class="moviepurchasecard-tri">
+                    <image src="../../assets/icons/tri.png" />
+                </view>
                 <view class="moviepurchasecard-tit">
                     <span>{{movielist.title}}</span>
                     <b>{{movielist.rating.count}} 分</b>
@@ -50,6 +55,162 @@
             </view>
             <!-- 卡片结束 -->
         </view>
-        <!-- 毛玻璃开始 -->
+        <!-- 毛玻璃结束 -->
+        <!-- 购买开始 -->
+        <view class="moviepurchase-cardbox">
+            <view class="moviepurchase-card">
+                <!-- tabbar开始 -->
+                <scroll-view
+                    class="moviepurchase-card-tabbar"
+                    enable-flex
+                >
+                    <view data-getDate="{{nowDateMD}}" id="wrap1" bindtap="handlerChangeTabContainer" class="{{'moviepurchase-card-tabbar-item ' + (tabContainerId === 'wrap1' ? 'moviepurchase-card-tabbar-item-active' : '')}}">
+                        今天 {{nowDateMD}}
+                    </view>
+                    <view data-getDate="{{nextDateMD}}" id="wrap2" bindtap="handlerChangeTabContainer" class="{{'moviepurchase-card-tabbar-item ' + (tabContainerId === 'wrap2' ? 'moviepurchase-card-tabbar-item-active' : '')}}">
+                        明天 {{nextDateMD}}
+                    </view>
+                    <view data-getDate="{{afterateMD}}" id="wrap3" bindtap="handlerChangeTabContainer" class="{{'moviepurchase-card-tabbar-item ' + (tabContainerId === 'wrap3' ? 'moviepurchase-card-tabbar-item-active' : '')}}">
+                        后天 {{afterateMD}}
+                    </view>
+                </scroll-view>
+                <!-- tabbar结束 -->
+                <!-- tabcontainer开始 -->
+                <scroll-view
+                    class="moviepurchase-card-tabcontainer"
+                    scroll-x
+                    scroll-into-view="{{tabContainerId}}"
+                    scroll-with-animation="true"
+                >
+                    <view class="moviepurchase-card-tabcontainer-item" id="wrap1">
+                        <view class="moviepurchase-card-tabcontainer-seats">
+                            <view 
+                                class="moviepurchase-card-tabcontainer-seats-warp"
+                                wx:for="{{userdata}}"
+                                wx:key="id"
+                            >
+                                <view class="moviepurchase-card-tabcontainer-seats-warp-shoplist">
+                                    <ul class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem">
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-time">
+                                            <span>{{item.showAt}}</span>
+                                            <b>约{{item.endAt}}分钟后离场</b>
+                                        </li>
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-info">
+                                            <span>{{item.filmLanguage}}{{item.imax}}</span>
+                                            <b>{{item.hallName}}</b>
+                                        </li>
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-price">
+                                            <span>￥</span>
+                                            <span>{{item.price}}</span>
+                                        </li>
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-shopbtn">
+                                            <a href="Javascript: ;">购票</a>
+                                        </li>
+                                    </ul>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="moviepurchase-card-tabcontainer-item" id="wrap2">
+                        <view class="moviepurchase-card-tabcontainer-seats">
+                            <view 
+                                class="moviepurchase-card-tabcontainer-seats-warp"
+                                wx:for="{{userdata}}"
+                                wx:key="id"
+                            >
+                                <view class="moviepurchase-card-tabcontainer-seats-warp-shoplist">
+                                    <ul class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem">
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-time">
+                                            <span>{{item.showAt}}</span>
+                                            <b>约{{item.endAt}}分钟后离场</b>
+                                        </li>
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-info">
+                                            <span>{{item.filmLanguage}}{{item.imax}}</span>
+                                            <b>{{item.hallName}}</b>
+                                        </li>
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-price">
+                                            <span>￥</span>
+                                            <span>{{item.price}}</span>
+                                        </li>
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-shopbtn">
+                                            <a href="Javascript: ;">购票</a>
+                                        </li>
+                                    </ul>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="moviepurchase-card-tabcontainer-item" id="wrap3">
+                        <view class="moviepurchase-card-tabcontainer-seats">
+                            <view 
+                                class="moviepurchase-card-tabcontainer-seats-warp"
+                                wx:for="{{userdata}}"
+                                wx:key="id"
+                            >
+                                <view class="moviepurchase-card-tabcontainer-seats-warp-shoplist">
+                                    <ul class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem">
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-time">
+                                            <span>{{item.showAt}}</span>
+                                            <b>约{{item.endAt}}分钟后离场</b>
+                                        </li>
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-info">
+                                            <span>{{item.filmLanguage}}{{item.imax}}</span>
+                                            <b>{{item.hallName}}</b>
+                                        </li>
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-price">
+                                            <span>￥</span>
+                                            <span>{{item.price}}</span>
+                                        </li>
+                                        <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-shopbtn">
+                                            <a href="Javascript: ;">购票</a>
+                                        </li>
+                                    </ul>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </scroll-view>
+                <!-- tabcontainer结束 -->
+            </view>
+        </view>
+        <!-- 购买结束 -->
+        <!-- 商品开始 -->
+        <view class="moviepurchase-goodbox">
+            <view class="moviepurchase-good">
+                <view class="moviepurchase-good-warp">
+                    <view class="moviepurchase-good-warp-title">
+                        <text>影院超值套餐</text>
+                    </view>
+                    <view class="moviepurchase-good-warp-content">
+                        <view 
+                            class="moviepurchase-good-warp-content-goodlist"
+                            wx:for="{{usergood}}"
+                            wx:key="id"
+                        > 
+                            <view class="moviepurchase-good-warp-content-goodlist-gooditem">
+                                <view class="good_img">
+                                    <image src="{{item.imgUrl}}" />
+                                </view>
+                                <view class="good_txt">
+                                    <view class="good_tit">
+                                        <span>{{item.title}}</span>
+                                    </view>
+                                    <view class="good_mb">
+                                        <view class="good_price">
+                                            <span>￥{{item.price}}</span>
+                                        </view>
+                                        <view class="good_btn">
+                                            <b>{{filters.handlerShowNum(item.iSum)}}已买</b>
+                                            <a href="Javascript: ;">去购买</a>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <!-- 商品结束 -->
     </view>
 </view>

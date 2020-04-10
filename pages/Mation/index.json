@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "资讯",
-  "usingComponents": {}
+  "usingComponents": {
+    "MationBanner": "../../components/Mation/MationBanner"
+  }
 }
