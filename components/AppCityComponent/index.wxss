@@ -1,0 +1,24 @@
+.appcity {
+  position: absolute;
+  top: 20rpx;
+  left: 40rpx;
+  z-index: 999;
+}
+.appcity .appcity-container {
+  min-width: 140rpx;
+  height: 60rpx;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  padding: 0 10rpx;
+  z-index: 999;
+  border-radius: 30rpx;
+  background: rgba(0, 0, 0, 0.3);
+}
+.appcity .appcity-container image {
+  display: inline-block;
+  width: 24rpx;
+  height: 12rpx;
+  margin-left: 20rpx;
+}

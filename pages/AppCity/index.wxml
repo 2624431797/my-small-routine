@@ -1,0 +1,33 @@
+<view class="appcitybox">
+    <view class="appcity">
+        
+            <!-- 搜索开始 -->
+            <view class="appcity-search">
+                <van-search
+                    value="{{searchValue}}"
+                    placeholder="请输入城市"
+                    background="#d9d9d9"
+                    shape="round"
+                    show-action="{{searchValue}}"
+                    bind:change="handlerSearchKey"
+                />
+            </view>
+            <!-- 搜索结束 -->
+            <!-- 当前开始 -->
+            <view class="appcity-current">
+                
+            </view>
+            <!-- 当前结束 -->
+            <!-- 热门开始 -->
+            <view class="appcity-hot">
+                
+            </view>
+            <!-- 热门结束 -->
+            <!-- 索引开始 -->
+            <view class="appcity-indexof">
+                
+            </view>
+            <!-- 索引结束 -->
+        
+    </view>
+</view>

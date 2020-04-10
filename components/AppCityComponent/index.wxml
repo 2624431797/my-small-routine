@@ -1,0 +1,10 @@
+<view class="appcitybox">
+    <view class="appcity">
+        <navigator url="/pages/AppCity/index">
+            <view class="appcity-container">
+                <text>城市</text>
+                <image src="/assets/icons/toggle.png" />
+            </view>
+        </navigator>
+    </view>
+</view>

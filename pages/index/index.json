@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "影片",
   "usingComponents": {
-    "Banner" : "../../components/Banner"
+    "Banner" : "../../components/Banner",
+    "AppCityComponent" : "../../components/AppCityComponent"
   }
 }

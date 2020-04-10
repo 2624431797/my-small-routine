@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/AppCity/index",
     "pages/index/index",
     "pages/Cinema/index",
     "pages/Mation/index",

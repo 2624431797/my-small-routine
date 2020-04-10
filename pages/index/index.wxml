@@ -8,6 +8,7 @@
 >
   <view class="container">
     <Banner />
+    <AppCityComponent />
 
     <view class="{{'navbarbox ' + (scrollTop >= 210 ? 'navbarbox-active' : '')}}">
       <view class="navbar">
