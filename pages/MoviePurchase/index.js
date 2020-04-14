@@ -14,7 +14,8 @@ Page({
     nowDateMD: "",
     nextDateMD: "",
     afterateMD: "",
-    initDatePara: ""
+    initDatePara: "",
+    nowCity: ""
   },
   //初始化
   onLoad: function (options) {
@@ -23,6 +24,9 @@ Page({
     this.handlerGetInit(options.id)
     this.handlerGetInitDate()
     this.handlerGetInitGood(options.id)
+    //城市
+    let nowCity = wx.getStorageSync("AppCity")
+    this.setData({nowCity})
     setTimeout(() => {
       this.setData({
         movieId: options.id,

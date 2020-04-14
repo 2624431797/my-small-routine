@@ -8,7 +8,7 @@
             <view class="moviepurasecity">
                 <view class="moviepurasecity-left">
                     <image src="../../assets/icons/weizhi.png" />
-                    <text>潍坊</text>
+                    <text>{{nowCity}}</text>
                 </view>
                 <view class="moviepurasecity-right">
                     <i class="iconfont icon-kefu" />

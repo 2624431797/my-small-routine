@@ -1,33 +1,80 @@
+<wxs src="../../api/filters.wxs" module="filters" />
+
 <view class="appcitybox">
     <view class="appcity">
-        
-            <!-- 搜索开始 -->
-            <view class="appcity-search">
-                <van-search
-                    value="{{searchValue}}"
-                    placeholder="请输入城市"
-                    background="#d9d9d9"
-                    shape="round"
-                    show-action="{{searchValue}}"
-                    bind:change="handlerSearchKey"
-                />
+        <!-- 搜索开始 -->
+        <view class="appcity-search">
+            <van-search
+                value="{{searchVal}}"
+                placeholder="请输入城市"
+                background="#d9d9d9"
+                shape="round"
+                show-action="{{searchVal}}"
+                bind:change="handlerSearchKey"
+            />
+            <view class="appcity-search-dropdown" wx:if="{{searchVal}}">
+                <view class="appcity-search-dropdown-block" wx:if="{{searchList.length > 0}}">
+                    <view wx:for="{{searchList}}" wx:key="id" class="appcity-search-dropdown-block-item">
+                        <view class="appcity-search-dropdown-block-item-select" bindtap="handlerSelectCity" data-selectCity="{{item.name}}">
+                            <text>{{item.name}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="appcity-search-dropdown-none" wx:else>
+                    <text>暂无搜索项</text>
+                </view>
             </view>
-            <!-- 搜索结束 -->
-            <!-- 当前开始 -->
-            <view class="appcity-current">
-                
+        </view>
+        <!-- 搜索结束 -->
+        <!-- 当前开始 -->
+        <view class="appcity-current">
+            <p>当前城市</p>
+            <view class="appcity-current-container">
+                <view class="appcity-current-container-list">
+                    <text wx:if="{{!nowCity}}">定位失败，请重试选择城市</text>
+                    <text wx:else>{{nowCity}}</text>
+                </view>
             </view>
-            <!-- 当前结束 -->
-            <!-- 热门开始 -->
-            <view class="appcity-hot">
-                
+        </view>
+        <!-- 当前结束 -->
+        <!-- 热门开始 -->
+        <view class="appcity-hot">
+            <p>热门城市</p>
+            <view class="appcity-hot-container">
+                <view 
+                    wx:for="{{hotCitys}}" 
+                    wx:key="id" 
+                    class="appcity-hot-container-list"
+                >
+                    <view class="appcity-hot-container-list-item" bindtap="handlerSelectCity" data-selectCity="{{item.nm}}">
+                        <text>{{item.nm}}</text>
+                    </view>
+                </view>
             </view>
-            <!-- 热门结束 -->
-            <!-- 索引开始 -->
-            <view class="appcity-indexof">
-                
-            </view>
-            <!-- 索引结束 -->
-        
+        </view>
+        <!-- 热门结束 -->
+        <!-- 索引开始 -->
+        <view class="appcity-indexof">
+            <p>索引城市</p>
+            <van-index-bar 
+                scroll-top="{{scrollTop}}"
+                index-list="{{indexList}}"
+                highlight-color="#07c160"
+            >
+                <view wx:for="{{indexCitys}}" wx:key="id">
+                    <van-index-anchor index="{{item.initial}}" />
+                    <van-cell 
+                        wx:for="{{item.list}}" 
+                        wx:key="id" 
+                        wx:for-index="idx" 
+                        wx:for-item="itemName" 
+                        title="{{itemName.name}}" 
+                        bindtap="handlerSelectCity"
+                        data-selectCity="{{itemName.name}}"
+                    />
+                </view>
+            </van-index-bar>
+        </view>
+        <!-- 索引结束 -->
     </view>
 </view>

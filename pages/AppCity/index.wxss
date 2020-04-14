@@ -1,1 +1,117 @@
-/* pages/AppCity/index.wxss */
+.appcitybox {
+  background: #fff;
+}
+.appcitybox .appcity {
+  position: relative;
+  /* 搜索开始 */
+  /* 搜索结束 */
+  /* 当前开始 */
+  /* 当前结束 */
+  /* 热门开始 */
+  /* 热门结束 */
+  /* 索引开始 */
+  /* 索引结束 */
+}
+.appcitybox .appcity .appcity-search {
+  position: relative;
+  width: 100%;
+}
+.appcitybox .appcity .appcity-search .appcity-search-dropdown {
+  position: absolute;
+  width: 100%;
+  min-height: 80rpx;
+  top: 108rpx;
+  z-index: 99999999999;
+}
+.appcitybox .appcity .appcity-search .appcity-search-dropdown .appcity-search-dropdown-block {
+  height: 100%;
+}
+.appcitybox .appcity .appcity-search .appcity-search-dropdown .appcity-search-dropdown-block .appcity-search-dropdown-block-item {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 40rpx;
+  color: #333;
+  line-height: 80rpx;
+  background: #fff;
+}
+.appcitybox .appcity .appcity-search .appcity-search-dropdown .appcity-search-dropdown-block .appcity-search-dropdown-block-item .appcity-search-dropdown-block-item-select {
+  width: 100%;
+}
+.appcitybox .appcity .appcity-search .appcity-search-dropdown .appcity-search-dropdown-none {
+  height: 80rpx;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  line-height: 80rpx;
+  background: #fff;
+}
+.appcitybox .appcity .appcity-current {
+  padding: 20rpx 70rpx 20rpx 30rpx;
+}
+.appcitybox .appcity .appcity-current p {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+}
+.appcitybox .appcity .appcity-current .appcity-current-container {
+  display: flex;
+  height: 80rpx;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.appcitybox .appcity .appcity-current .appcity-current-container .appcity-current-container-list {
+  min-width: 100rpx;
+  height: 60rpx;
+  padding: 0 40rpx;
+  color: #191a1b;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 6rpx;
+  background: #dedbdb;
+}
+.appcitybox .appcity .appcity-hot {
+  padding: 20rpx 70rpx 20rpx 30rpx;
+}
+.appcitybox .appcity .appcity-hot p {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+}
+.appcitybox .appcity .appcity-hot .appcity-hot-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.appcitybox .appcity .appcity-hot .appcity-hot-container .appcity-hot-container-list {
+  min-width: 100rpx;
+  height: 60rpx;
+  padding: 0 40rpx;
+  margin: 16rpx 0;
+  color: #191a1b;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 6rpx;
+  background: #dedbdb;
+}
+.appcitybox .appcity .appcity-hot .appcity-hot-container .appcity-hot-container-list .appcity-hot-container-list-item {
+  width: 100%;
+}
+.appcitybox .appcity .appcity-indexof {
+  padding: 20rpx 70rpx 20rpx 30rpx;
+}
+.appcitybox .appcity .appcity-indexof p {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+}
+.appcitybox .appcity .appcity-indexof .van-index-bar {
+  margin-top: 20rpx;
+}
+.appcitybox .appcity .appcity-indexof .van-index-bar .van-index-bar__sidebar .van-index-bar__index {
+  font-size: 28rpx;
+  margin: 8rpx 0;
+}

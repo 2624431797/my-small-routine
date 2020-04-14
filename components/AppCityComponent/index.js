@@ -1,23 +1,11 @@
-// components/AppCityComponent/index.js
 Component({
-  /**
-   * 组件的属性列表
-   */
-  properties: {
-
-  },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
-
+    nowCity: ""
   },
-
-  /**
-   * 组件的方法列表
-   */
-  methods: {
-
+  ready(){
+    let nowCity = wx.getStorageSync("AppCity")
+    this.setData({
+      nowCity
+    })
   }
 })
