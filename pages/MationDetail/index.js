@@ -1,5 +1,3 @@
-import { requestPost } from "../../services/index"
-
 Page({
   data: {
     mationlist: []
@@ -8,7 +6,7 @@ Page({
     this.handlerGetInit(options.id)
   },
   handlerGetInit(id){
-    requestPost(
+    this.requestPost(
       `/api/z1/GetMationDetail/${id}`
       ).then(res => {
       this.setData({

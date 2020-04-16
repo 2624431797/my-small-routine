@@ -1,0 +1,96 @@
+<view class="minebox">
+    <view class="mine">
+        <!-- 登录 -->
+        <view class="mine-login">
+            <view class="mine-login-img">
+                <image src="../../assets/images/user.png" />
+            </view>
+            <view class="mine-login-name">
+                <view>  
+                    <navigator url="/pages/AppLogin/index">
+                        <text>立即登录</text>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        <!-- 登录 -->
+        <!-- 订单 -->
+        <view class="mine-order">
+            <view class="mine-order-movie">
+                <navigator url="">
+                    <view>
+                        <image src="../../assets/images/movie.png" />
+                        <span>电影订单</span>
+                    </view>
+                </navigator>
+            </view>
+            <view class="mine-order-goods">
+                <navigator url="">
+                    <view>
+                        <image src="../../assets/images/goods.png" />
+                        <span>商品订单</span>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+        <!-- 订单 -->
+        <!-- 列表 -->
+        <view class="mine-list">
+            <van-cell-group class="mine-list-container">
+                <van-cell
+                    id="mine-list1"
+                    class="mine-list-container-item"
+                    icon=" iconfont icon-dianyingquan"
+                    title="影券" 
+                    url="" 
+                    is-link 
+                    link-type="navigateTo" 
+                />
+                <van-cell
+                    id="mine-list2"
+                    class="mine-list-container-item"
+                    icon=" iconfont icon-hongbao"
+                    title="红包" 
+                    url="" 
+                    is-link 
+                    link-type="navigateTo" 
+                />
+                <van-cell
+                    id="mine-list3"
+                    class="mine-list-container-item"
+                    icon=" iconfont icon-xinbaniconshangchuan-"
+                    title="余额" 
+                    url="" 
+                    is-link 
+                    link-type="navigateTo" 
+                />
+                <van-cell
+                    id="mine-list4"
+                    class="mine-list-container-item"
+                    icon=" iconfont icon-shezhi"
+                    title="设置" 
+                    url="" 
+                    is-link 
+                    link-type="navigateTo" 
+                />
+                <van-cell
+                    id="mine-list5"
+                    class="mine-list-container-item"
+                    icon=" iconfont icon-kefu"
+                    title="客服" 
+                    url="" 
+                    is-link 
+                    link-type="navigateTo" 
+                />
+            </van-cell-group>
+        </view>
+        <!-- 列表 -->
+        <!-- 退出 -->
+        <view class="mine-btnbox">
+            <view class="mine-btn">
+                <text>退出登录</text>
+            </view>
+        </view>
+        <!-- 退出 -->
+    </view>
+</view>

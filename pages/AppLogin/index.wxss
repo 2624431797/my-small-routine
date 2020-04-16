@@ -1,0 +1,41 @@
+.apploginbox {
+  background: #fff;
+}
+.apploginbox .applogin {
+  position: relative;
+}
+.apploginbox .applogin .applogin-logo {
+  display: flex;
+  height: 160px;
+  justify-content: center;
+  align-items: center;
+}
+.apploginbox .applogin .applogin-logo image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.apploginbox .applogin .applogin-form {
+  width: 100%;
+}
+.apploginbox .applogin .applogin-form .applogin-form-container .applogin-form-container-link {
+  height: 60rpx;
+  margin-bottom: 60rpx;
+}
+.apploginbox .applogin .applogin-form .applogin-form-container .applogin-form-container-link .applogin-form-container-link-item {
+  width: 50%;
+  height: 60rpx;
+  float: left;
+  text-align: center;
+  line-height: 60rpx;
+}
+.apploginbox .applogin .applogin-form .applogin-form-container .applogin-form-container-link .applogin-form-container-link-item text {
+  color: #1989fa;
+}
+.apploginbox .applogin .applogin-form .applogin-form-container .applogin-form-container-loginbtn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.apploginbox .applogin .applogin-form .applogin-form-container .applogin-form-container-loginbtn .van-button {
+  width: 600rpx;
+}

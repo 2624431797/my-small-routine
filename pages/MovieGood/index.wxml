@@ -1,0 +1,80 @@
+<view class="moviegoodbox">
+    <view class="moviegood">
+        <!-- 顶部详情 -->
+        <view class="moviegood-info">
+            <view class="moviegood-info-img">
+                <image src="{{goodlist.imgUrl}}" />
+            </view>
+            <view class="moviegood-info-sub">
+                <p>{{goodlist.title}}</p>
+                <i>{{goodlist.person}}</i>
+                <text>有效期: {{goodlist.time}}</text>
+                <b>可用时间: {{goodlist.keep}}</b>
+                <view class="moviegood-info-sub-price">
+                    <span class="moviegood-info-sub-price-new" style="margin-right: 10px;">{{priceUnit}} 元</span>
+                    <span class="moviegood-info-sub-price-old">{{goodlist.old}} 元</span>
+                </view>
+            </view>
+        </view>
+        <!-- 顶部详情 -->
+        <!-- 套餐详情 -->
+        <view class="moviegood-deal">
+            <text>套餐详情:</text>
+            <ul class="moviegood-deal-container">
+                <li wx:for="{{goodlist.detail}}" wx:key="id">
+                    <span>{{item.title}}</span>
+                    <b>数量: {{item.num}}</b>
+                </li>
+            </ul>
+        </view>
+        <!-- 套餐详情 -->
+        <!-- 数量详情 -->
+        <view class="moviegood-inum">
+            <text>数量:</text>
+            <view class="moviegood-inum-container">
+                <van-stepper 
+                    value="{{stepperNum}}" 
+                    input-width="80px" 
+                    button-size="32px" 
+                    bind:change="handlerStepperChange"
+                ></van-stepper>
+            </view>
+        </view>
+        <!-- 数量详情 -->
+        <!-- 提示信息 -->
+        <view class="moviegood-line">
+            <text>提示信息:</text>
+            <text>使用时间: 请在影城卖品部营业时间兑换。</text>
+        </view>
+        <!-- 提示信息 -->
+        <!-- 手机详情 -->
+        <view class="moviegood-mobile">
+            <van-cell-group>
+                <van-field
+                    value="{{mobile}}"
+                    label="手机号:"
+                    placeholder="请输入手机号"
+                    clearable
+                />
+            </van-cell-group>
+        </view>
+        <!-- 手机详情 -->
+        <!-- 购买按钮 -->
+        <view class="moviegood-goodbtn">
+            <view class="moviegood-goodbtn-top">
+                <view class="moviegood-goodbtn-top-left">
+                    <image src="../../assets/images/open.png" />
+                    <text>随时可退</text>
+                </view>
+                <view class="moviegood-goodbtn-top-right">
+                    <text>小计</text>
+                    <span style="margin-left: 10px;">￥{{priceSum}}</span>
+                </view>
+            </view>
+            <view class="moviegood-goodbtn-bot">
+                <a href="JavaScript: ;" bindtap="handlerLinkPay">确认支付</a>
+            </view>
+        </view>
+        <!-- 购买按钮 -->
+    </view>
+</view>

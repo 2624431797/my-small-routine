@@ -1,4 +1,6 @@
-html, body, dl, ul, ol, li, dt, dd, form, img, fieldset, table, tr, td, h1, h2,
+@import "./public/font/iconfont.wxss";
+
+html, body, dl, ul, ol, li, dt, dd, form, image, fieldset, table, tr, td, h1, h2,
 h3, h4, h5, h6, p, legend {
   padding: 0;
   margin: 0;

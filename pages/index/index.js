@@ -1,5 +1,3 @@
-import { requestPost } from "../../services/index"
-
 Page({
   data: {
     movielist: [],
@@ -30,7 +28,7 @@ Page({
       title: '加载中'
     })
     let para = { page: this.data.page, limit: this.data.limit}
-    requestPost(
+    this.requestPost(
       `/api/v1/GetMovieList/${this.data.type}`, para
       ).then(res => {
       let {page, limit} = this.data

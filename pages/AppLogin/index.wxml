@@ -1,0 +1,62 @@
+<view class="apploginbox">
+    <view class="applogin">
+        <view class="applogin-logo">
+            <image src="../../assets/images/local.png" />
+        </view>
+        <view class="applogin-form">
+            <form class="applogin-form-container" bindsubmit="formSubmit">
+                <van-field
+                    value="{{username}}"
+                    label="手机号"
+                    placeholder="请输入手机号"
+                    clearable
+                    bind:change="handlerGetUserName"
+                />
+                <van-field
+                    value="{{possword}}"
+                    label="密码"
+                    placeholder="请输入密码"
+                    password
+                    clearable
+                    bind:change="handlerGetPassWord"
+                />
+                <van-field
+                    value="{{sms}}"
+                    center
+                    clearable
+                    label="短信验证码"
+                    placeholder="请输入短信验证码"
+                    use-button-slot
+                >
+                    <van-button slot="button" size="small" type="primary"
+                    >发送验证码</van-button
+                    >
+                </van-field>
+                <view class="applogin-form-container-link" style="margin-top: 16px;">
+                    <view class="applogin-form-container-link-item">
+                        <navigator url="">
+                            <text>立即注册</text>   
+                        </navigator>
+                    </view>
+                    <view class="applogin-form-container-link-item">
+                        <navigator url="">
+                            <text>找回密码</text>
+                        </navigator>
+                    </view>
+                </view>
+                <view class="applogin-form-container-loginbtn">
+                    <van-button 
+                        class="applogin-form-container-loginbtn-vanbtn"
+                        type="primary"
+                        color="#ff7426"
+                        round
+                        loading="{{isLoading}}"
+                        loading-text="登录中..."
+                        bindtap="handlerFormSubmit"
+                    >登录</van-button>
+                </view>
+            </form>
+        </view>
+    </view>
+    <van-toast id="van-toast" />
+</view>

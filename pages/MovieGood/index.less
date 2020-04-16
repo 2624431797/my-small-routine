@@ -1,0 +1,190 @@
+.moviegoodbox{
+    position: relative;
+    background: #f0efed;
+    .moviegood{
+        width: 100%;
+        height: 100%;
+        /* 顶部详情 */
+        .moviegood-info{
+            height: 360rpx;
+            padding: 28rpx;
+            margin-bottom: 50rpx;
+            color: #999;
+            background: #fff;
+            .moviegood-info-img{
+                width: 300rpx;
+                height: 300rpx;
+                float: left;
+                margin-right: 20rpx;
+                border-radius: 10rpx;
+                overflow: hidden;
+                image{
+                    width: 300rpx;
+                    height: 300rpx; 
+                }
+            }
+            .moviegood-info-sub{
+                display: flex;
+                float: left;
+                flex-direction: column;
+                p{
+                    margin-bottom: 20rpx;
+                    color: #000;
+                    font-weight: bold;
+                    font-family: "微软雅黑";
+                }
+                i{
+                    width: 72rpx;
+                    margin-bottom: 20rpx;
+                    text-align: center;
+                    line-height: 48rpx;
+                    font-size: 24rpx;
+                    color: #fff;
+                    font-family: PingFangSC-Regular,Hiragino Sans GB,sans-serif;
+                    background: #f90;
+                    border-radius: 10rpx;
+                }
+                b{
+                    margin-top: 10rpx;
+                }
+                .moviegood-info-sub-price{
+                    margin-top: 10px;
+                    .moviegood-info-sub-price-new{
+                        color: #f03d37;
+                        font-size: 20px;
+                    }
+                    .moviegood-info-sub-price-old{
+                        text-align: justify;
+                        word-break: break-all;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+        /* 顶部详情 */
+        /* 套餐详情 */
+        .moviegood-deal{
+            padding: 28rpx;
+            margin-bottom: 50rpx;
+            background: #fff;
+            text{
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            .moviegood-deal-container{
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                    color: #999;
+                    line-height: 44rpx;
+                }
+            }
+        }
+        /* 套餐详情 */
+        /* 数量详情 */
+        .moviegood-inum{
+            display: flex;
+            justify-content: space-between;
+            padding: 28rpx;
+            margin-bottom: 50rpx;
+            background: #fff;
+            text{
+                font-weight: bold;
+                line-height: 64rpx;
+            }
+            .moviegood-inum-container{
+                input{
+                    border: 4rpx solid #DDD8CE;
+                    margin: 0 12rpx;
+                }
+                .van-stepper__minus, .van-stepper__plus{
+                    color: #e54847;
+                    border: 2rpx solid #e54847;
+                }
+                .van-stepper__minus--disabled{
+                    color: #999!important;
+                    border: none;
+                    background: #dcdcdc!important;
+                }
+                .van-stepper__minus:active, .van-stepper__plus:active{
+                    color: #fff;
+                    background: #e54847;
+                }
+            }
+        }
+        /* 数量详情 */
+        /* 提示信息 */
+        .moviegood-line{
+            padding: 14px;
+            margin-bottom: 25px;
+            background: #fff;
+            text:nth-child(1){
+                display: block;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            text:nth-child(2){
+                display: block;
+                color: #999;
+            }
+        }
+        /* 提示信息 */
+        /* 手机详情 */
+        .moviegood-mobile{
+            height: 100rpx;
+            margin-bottom: 224rpx;
+        }
+        /* 手机详情 */
+        /* 购买按钮 */
+        .moviegood-goodbtn{
+            position: fixed;
+            width: 93%;
+            height: 196rpx;
+            padding: 28rpx 28rpx 0;
+            bottom: 0;
+            z-index: 999999;
+            background: #fff;
+            .moviegood-goodbtn-top{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 12rpx;
+                .moviegood-goodbtn-top-left{
+                    image{
+                        display: inline-block;
+                        width: 32rpx;
+                        height: 32rpx;
+                    }
+                    text{
+                        display: inline-block;
+                        color: #6bbd00;
+                        margin-left: 16rpx;
+                    }
+                }
+                .moviegood-goodbtn-top-right{
+                    text{
+                        font-weight: bold;
+                    }
+                    span{
+                        font-size: 36rpx;
+                        color: #33c1af;
+                    }
+                }
+            }
+            .moviegood-goodbtn-bot{
+                display: flex;
+                height: 100rpx;
+                border-radius: 40rpx;
+                overflow: hidden;
+                a{
+                    width: 100%;
+                    text-align: center;
+                    line-height: 100rpx;
+                    color: #fff;
+                    font-size: 32rpx;
+                    background: #f90;
+                }
+            }
+        }
+        /* 购买按钮 */
+    }
+}

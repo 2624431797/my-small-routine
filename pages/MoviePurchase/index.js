@@ -1,5 +1,3 @@
-import { requestPost } from "../../services/index"
-
 Page({
   data: {
     movielist: [],
@@ -36,7 +34,7 @@ Page({
   },
   //获取数据
   handlerGetInit(id){
-    requestPost(
+    this.requestPost(
       `/api/v1/GetMoviePurchase/${id}`
       ).then(res => {
       this.setData({
@@ -48,7 +46,7 @@ Page({
   //获取购买日期数据
   handlerGetInitDate(){
     let para = this.data.initDatePara
-    requestPost(
+    this.requestPost(
       `/api/v1/GetMoviePurchaseDate`, para
       ).then(res => {
       this.setData({
@@ -58,7 +56,7 @@ Page({
   },
   //获取商品数据 
   handlerGetInitGood(id){
-    requestPost(
+    this.requestPost(
       `/api/v1/GetMoviePurchaseGood`, id
       ).then(res => {
       this.setData({
@@ -82,7 +80,7 @@ Page({
       swiperIndex: e.detail.current
     })
     let {swiperIndex} = this.data
-    requestPost(
+    this.requestPost(
       `/api/v1/GetMoviePurchase/${this.data.movieId}`
       ).then(res => {
       this.setData({

@@ -1,5 +1,3 @@
-import { requestPost } from "../../services/index"
-
 Page({
   data: {
     page: 1,
@@ -22,7 +20,7 @@ Page({
       title: '加载中'
     })
     let para = { page: this.data.page, limit: this.data.limit}
-    requestPost(
+    this.requestPost(
       `/api/z1/GetMationList`, para
       ).then(res => {
       let {page, limit} = this.data

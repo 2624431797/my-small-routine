@@ -1,0 +1,26 @@
+<view class="apppaybox">
+    <view class="apppay">
+        <view class="apppay-price">
+            <view>
+                <text>金额</text>
+            </view>
+            <view>
+                <span>{{priceTotal}} 元</span>
+            </view>
+        </view>
+        <view class="apppay-way">
+            <text class="apppay-way-tit">请选择支付方式:</text>
+            <view class="apppay-way-pay">
+                <view class="apppay-way-pay-wechat">
+                    <view class="apppay-way-pay-wechat-lable">
+                        <image src="../../assets/images/wechat.png" />
+                        <text>微信支付</text>
+                    </view>
+                    <view class="apppay-way-pay-wechat-content">
+                        <text>点击支付</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

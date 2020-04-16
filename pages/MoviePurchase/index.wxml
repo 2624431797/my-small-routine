@@ -201,7 +201,9 @@
                                         </view>
                                         <view class="good_btn">
                                             <b>{{filters.handlerShowNum(item.iSum)}}已买</b>
-                                            <a href="Javascript: ;">去购买</a>
+                                            <navigator url="/pages/MovieGood/index?id={{item.id}}">
+                                                <a href="Javascript: ;">去购买</a>  
+                                            </navigator>
                                         </view>
                                     </view>
                                 </view>
