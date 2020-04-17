@@ -1,15 +1,15 @@
 {
   "pages": [
-    "pages/AppCity/index",
+    "pages/AppLogin/index",
     "pages/index/index",
     "pages/Cinema/index",
     "pages/Mation/index",
     "pages/Mine/index",
+    "pages/AppCity/index",
     "pages/MovieDetail/index",
     "pages/MoviePurchase/index",
     "pages/MationDetail/index",
     "pages/AppPay/index",
-    "pages/AppLogin/index",
     "pages/MovieGood/index"
   ],
   "usingComponents": {

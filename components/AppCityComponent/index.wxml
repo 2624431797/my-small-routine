@@ -1,6 +1,6 @@
 <view class="appcitybox">
     <view class="appcity">
-        <navigator url="/pages/AppCity/index">
+        <navigator url="/pages/AppCity/index" redirect>
             <view class="appcity-container">
                 <text wx:if="{{!nowCity}}">请点击选择城市</text>
                 <text wx:else>{{nowCity}}</text>

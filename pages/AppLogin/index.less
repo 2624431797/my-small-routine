@@ -2,40 +2,49 @@
     background: #fff;
     .applogin{
         position: relative;
+        overflow: hidden;
         .applogin-logo{
             display: flex;
-            height: 160px;
+            height: 360rpx;
             justify-content: center;
             align-items: center;
+            margin: 80rpx;
+            border-bottom: 1px solid #ccc;
             image{
-                width: 120rpx;
-                height: 120rpx;
+                width: 160rpx;
+                height: 160rpx;
             }
         }
-        .applogin-form{
+        .applogin-upon{
             width: 100%;
-            .applogin-form-container{
-                .applogin-form-container-link{
-                    height: 60rpx;
-                    margin-bottom: 60rpx;
-                    .applogin-form-container-link-item{
-                        width: 50%;
-                        height: 60rpx;
-                        float: left;
-                        text-align: center;
-                        line-height: 60rpx;
-                        text{
-                            color: #1989fa;
-                        }
-                    }
-                }
-                .applogin-form-container-loginbtn{
-                    display: flex;
-                    width: 100%;
-                    justify-content: center;
-                    .van-button{
-                        width: 600rpx;
-                    }
+            height: 120rpx;
+            margin-top: 40rpx;
+            font-size: 36rpx;
+            color: #333;
+            line-height: 120rpx;
+            text-align: center;
+        }
+        .applogin-container{
+            padding: 10rpx 80rpx;
+            .applogin-container-tit{
+                color: #333;
+                font-size: 40rpx;
+                font-weight: bold;
+                margin-top: 40rpx;
+            }
+            .applogin-container-content{
+                color: #9d9d9d;
+                margin-top: 40rpx;
+            }
+            .applogin-container-btnbox{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                margin-top: 60rpx;
+                button{
+                    width: 600rpx;
+                    border-radius: 40rpx;
+                    font-size: 30rpx;
                 }
             }
         }
