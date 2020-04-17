@@ -5,7 +5,7 @@ const appGlobalData = getApp().globalData
  * @function
  * @param{Object} pageObj 当前页面的page对象
  * @param{Boolean} flag 是否开启权限判断
- */
+*/
 
 exports.routerFillter = function (pageObj, flag = false) {
     if (flag) {
