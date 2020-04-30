@@ -104,7 +104,12 @@
                                             <span>{{item.price}}</span>
                                         </li>
                                         <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-shopbtn">
-                                            <a href="Javascript: ;">购票</a>
+                                            <a 
+                                                href="Javascript: ;" 
+                                                bindtap="handlerLinkSeats"
+                                                data-id="{{item.id}}"
+                                                data-price="{{item.price}}"
+                                            >购票</a>
                                         </li>
                                     </ul>
                                 </view>
@@ -133,7 +138,12 @@
                                             <span>{{item.price}}</span>
                                         </li>
                                         <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-shopbtn">
-                                            <a href="Javascript: ;">购票</a>
+                                            <a 
+                                                href="Javascript: ;" 
+                                                bindtap="handlerLinkSeats"
+                                                data-id="{{item.id}}"
+                                                data-price="{{item.price}}"
+                                            >购票</a>
                                         </li>
                                     </ul>
                                 </view>
@@ -162,7 +172,12 @@
                                             <span>{{item.price}}</span>
                                         </li>
                                         <li class="moviepurchase-card-tabcontainer-seats-warp-shoplist-shopitem-shopbtn">
-                                            <a href="Javascript: ;">购票</a>
+                                            <a 
+                                                href="Javascript: ;" 
+                                                bindtap="handlerLinkSeats"
+                                                data-id="{{item.id}}"
+                                                data-price="{{item.price}}"
+                                            >购票</a>
                                         </li>
                                     </ul>
                                 </view>

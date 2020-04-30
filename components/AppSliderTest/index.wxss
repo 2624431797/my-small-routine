@@ -1,0 +1,32 @@
+.appslidertestbox {
+  background: #fff;
+}
+.appslidertestbox .appslidertest {
+  width: 80%;
+  height: 120rpx;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 120rpx;
+  font-size: 32rpx;
+  position: relative;
+  overflow: hidden;
+}
+.appslidertestbox .appslidertest .operationBgBox {
+  position: absolute;
+  height: 120rpx;
+  width: 100%;
+  background-color: #7BBB55;
+  border-radius: 5px;
+  overflow: hidden;
+  top: 0;
+  color: #fff;
+}
+.appslidertestbox .appslidertest .operationBgBox image {
+  position: absolute;
+  width: 120rpx;
+  height: 120rpx;
+  right: 0;
+  background: #e7e5e5;
+}

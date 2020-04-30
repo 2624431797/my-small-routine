@@ -1,0 +1,13 @@
+<view class="appslidertestbox">
+    <view class="appslidertest">
+        <text>{{ hint }}</text>
+        <view class='operationBgBox' style='left: {{ -(w + 2) }}px; transform: {{ cssAnimation }}'>
+            <text>{{ succeedMsg }}</text>
+            <view class='operationBox' catchtouchmove='moveFun' catchtouchend='endFun'>
+                <view>
+                    <image src='../../assets/images/testbtn.jpg'></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

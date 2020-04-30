@@ -10,7 +10,8 @@
     "pages/MoviePurchase/index",
     "pages/MationDetail/index",
     "pages/AppPay/index",
-    "pages/MovieGood/index"
+    "pages/MovieGood/index",
+    "pages/MovieSeats/index"
   ],
   "usingComponents": {
     "van-toast": "./miniprogram_npm/@vant/weapp/toast/index"

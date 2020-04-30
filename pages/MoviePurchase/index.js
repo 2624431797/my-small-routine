@@ -64,6 +64,16 @@ Page({
       })
     })
   },
+  //链到选座页
+  handlerLinkSeats(e){
+    let {id} = e.currentTarget.dataset
+    let {price} = e.currentTarget.dataset
+    wx.navigateTo({
+      url: "/pages/MovieSeats/index?obj=" + JSON.stringify({
+        id, price
+      })
+    })
+  },
   //获取影片标题
   handlerGetMovieTitle(){
     let movieTitle = wx.getStorageSync('movieTitle')

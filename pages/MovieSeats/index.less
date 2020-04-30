@@ -1,0 +1,102 @@
+.movieseatsbox{
+    background: #f1f1f1;
+    .movieseats{
+        position: relative;
+        height: 100vh;
+        /* 卡片 */
+        .movieseats-card{
+            padding: 16rpx 24rpx;
+            .movieseats-card-container{
+                line-height: 64rpx;
+                .movieseats-card-container-tit{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text{
+                        font-size: 32rpx;
+                        font-weight: bold;
+                        color: #333;
+                    }
+                    span{
+                        color: #f03d37;
+                        font-weight: bold;
+                    }
+                }
+                .movieseats-card-container-info{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    color: #666;
+                }
+            }
+        }
+        /* 卡片 */
+        /* 选座 */
+        .movieseats-seat{
+
+        }
+        /* 选座 */
+        /* 按钮 */
+        .movieseats-fixedbox{
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 16rpx 24rpx;
+            margin-bottom: 20rpx;
+            overflow: hidden;
+            .movieseats-fixedbox-hide{
+
+            }
+            .movieseats-fixedbox-content{
+                height: 80rpx;
+                margin: 10rpx 0rpx;
+                .movieseats-fixedbox-content-tit{
+                    float: left;
+                    height: 80rpx;
+                    line-height: 80rpx;
+                    color: #333;
+                    font-weight: bold;
+                }
+                .movieseats-fixedbox-content-btn{
+                    float: right;
+                    display: flex;
+                    height: 80rpx;
+                    justify-content: space-between;
+                    align-items: center;
+                    .movieseats-fixedbox-content-btn-item{
+                        width: 100rpx;
+                        height: 60rpx;
+                        margin-right: 24rpx;
+                        text-align: center;
+                        line-height: 60rpx;
+                        border-radius: 5px;
+                        border: 1px solid #d7d7d7;
+                    }
+                }
+            }
+            .movieseats-fixedbox-btn{
+                display: flex;
+                height: 100rpx;
+                justify-content: center;
+                align-items: center;
+                .movieseats-fixedbox-btn-hide, .movieseats-fixedbox-btn-show{
+                    width: 80%;
+                    height: 80rpx;
+                    color: #fff;
+                    font-size: 32rpx;
+                    border-radius: 20rpx;
+                    text-align: center;
+                    line-height: 80rpx;
+                }
+                .movieseats-fixedbox-btn-hide{
+                    background: #f9abb3;
+                }
+                .movieseats-fixedbox-btn-show{
+                    background: #F45664;
+                }
+            }
+        }
+        /* 按钮 */
+    }
+}

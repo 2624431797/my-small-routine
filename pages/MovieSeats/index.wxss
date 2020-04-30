@@ -1,0 +1,97 @@
+.movieseatsbox {
+  background: #f1f1f1;
+}
+.movieseatsbox .movieseats {
+  position: relative;
+  height: 100vh;
+  /* 卡片 */
+  /* 卡片 */
+  /* 选座 */
+  /* 选座 */
+  /* 按钮 */
+  /* 按钮 */
+}
+.movieseatsbox .movieseats .movieseats-card {
+  padding: 16rpx 24rpx;
+}
+.movieseatsbox .movieseats .movieseats-card .movieseats-card-container {
+  line-height: 64rpx;
+}
+.movieseatsbox .movieseats .movieseats-card .movieseats-card-container .movieseats-card-container-tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.movieseatsbox .movieseats .movieseats-card .movieseats-card-container .movieseats-card-container-tit text {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+.movieseatsbox .movieseats .movieseats-card .movieseats-card-container .movieseats-card-container-tit span {
+  color: #f03d37;
+  font-weight: bold;
+}
+.movieseatsbox .movieseats .movieseats-card .movieseats-card-container .movieseats-card-container-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #666;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 16rpx 24rpx;
+  margin-bottom: 20rpx;
+  overflow: hidden;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-content {
+  height: 80rpx;
+  margin: 10rpx 0rpx;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-content .movieseats-fixedbox-content-tit {
+  float: left;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #333;
+  font-weight: bold;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-content .movieseats-fixedbox-content-btn {
+  float: right;
+  display: flex;
+  height: 80rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-content .movieseats-fixedbox-content-btn .movieseats-fixedbox-content-btn-item {
+  width: 100rpx;
+  height: 60rpx;
+  margin-right: 24rpx;
+  text-align: center;
+  line-height: 60rpx;
+  border-radius: 5px;
+  border: 1px solid #d7d7d7;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-btn {
+  display: flex;
+  height: 100rpx;
+  justify-content: center;
+  align-items: center;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-btn .movieseats-fixedbox-btn-hide,
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-btn .movieseats-fixedbox-btn-show {
+  width: 80%;
+  height: 80rpx;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-btn .movieseats-fixedbox-btn-hide {
+  background: #f9abb3;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-btn .movieseats-fixedbox-btn-show {
+  background: #F45664;
+}

@@ -25,5 +25,8 @@
                 >授权登录</button>
             </view>
         </view>
+        <view class="applogin-appslidertest" wx:if="{{isTest}}">
+            <AppSliderTest bindmyevent="myEventListener" />
+        </view>
     </view>
 </view>

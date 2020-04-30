@@ -1,0 +1,51 @@
+<view class="movieseatsbox">
+    <view class="movieseats">
+        <!-- 卡片 -->
+        <view class="movieseats-card"> 
+            <view class="movieseats-card-container">
+                <view class="movieseats-card-container-tit">
+                    <text>三体2:黑暗森林</text>
+                    <span>{{filmPrice}} 元</span>
+                </view>
+                <view class="movieseats-card-container-info">
+                    <text>国语3D</text>
+                    <text>剧情 爱情 玄幻</text>
+                    <text>2021-1-22</text>
+                </view>
+            </view>
+        </view>
+        <!-- 卡片 -->
+        <!-- 选座 -->
+        <view class="movieseats-seat"> 
+            
+        </view>
+        <!-- 选座 -->
+        <!-- 按钮 -->
+        <view class="movieseats-fixedbox"> 
+            <view wx:if="{{condition}}" class="movieseats-fixedbox-hide">
+                
+            </view>
+            <view class="movieseats-fixedbox-content">
+                <view class="movieseats-fixedbox-content-tit">
+                    <text>推荐选座:</text>
+                </view>
+                <view class="movieseats-fixedbox-content-btn">
+                    <view class="movieseats-fixedbox-content-btn-item">
+                        <text>1人</text>
+                    </view>
+                </view>
+            </view>
+            <view class="movieseats-fixedbox-btn">
+                <view wx:if="{{!btnStatus}}" class="movieseats-fixedbox-btn-hide">
+                    <text>请选座位</text>
+                </view>
+                <view wx:else class="movieseats-fixedbox-btn-show">
+                    <navigator url="">
+                        <text>确认座位</text>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        <!-- 按钮 -->
+    </view>
+</view>
