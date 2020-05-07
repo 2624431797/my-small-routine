@@ -1,4 +1,5 @@
 .movieseatsbox{
+    height: 100vh;
     background: rgb(247, 239, 239);
     .movieseats{
         position: relative;
@@ -34,8 +35,9 @@
         /* 选座 */
         .movieseats-seat{
             height: 100%;
+            margin-bottom: 320rpx;
             .movieseats-seat-area{
-                position: fixed;
+                position: relative;
                 left: 0;
                 background: rgb(247, 239, 239);
                 .movieseats-seat-area-hall{
@@ -65,7 +67,7 @@
                     border-radius: 10rpx;
                 }
                 .movieseats-seat-area-center{
-                    position: fixed;
+                    position: absolute;
                     border: 1px dashed #e5e5e5;
                     /* 定位垂直对齐 */
                     left: 50%;
@@ -84,7 +86,7 @@
                     }
                 }
                 .movieseats-seat-area-number{
-                    position: fixed;
+                    position: absolute;
                     border-radius: 15rpx;
                     background-color: rgba(0, 0, 0, 0.3);
                     overflow: hidden;
@@ -104,6 +106,7 @@
                     margin-top: 60rpx;
                     margin-bottom: 20rpx;
                     font-size: 28rpx;
+                    background: rgb(247, 239, 239);
                     .movieseats-seat-area-tip-item{
                         display: flex;
                         justify-content: center;
@@ -126,6 +129,8 @@
             padding: 16rpx 24rpx;
             margin-bottom: 20rpx;
             overflow: hidden;
+            background: #fff;
+            z-index: 999999;
             .movieseats-fixedbox-selected{
                 display: flex;
                 min-height: 80rpx;

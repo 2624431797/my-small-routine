@@ -25,8 +25,8 @@
                 <swiper 
                     class="moviepurchase-banner-swiper"
                     bindchange="handlerBannerChange"
-                    previous-margin="130px"
-                    next-margin="110px"
+                    previous-margin="260rpx"
+                    next-margin="220rpx"
                 >
                     <block wx:for="{{bannerlist}}" wx:key="id" >
                         <swiper-item class="moviepurchase-banner-item">

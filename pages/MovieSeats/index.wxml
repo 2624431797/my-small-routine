@@ -18,7 +18,7 @@
         <!-- 选座 -->
         <view class="movieseats-seat"> 
             <movable-area 
-                style="height: {{(seatRow * 40 + 350) + 'rpx'}}; width: 100vw; top:{{(rpxNum * 160) + 'px'}}" 
+                style="height: {{(seatRow * 40 + 375) + 'rpx'}}; width: 100vw;" 
                 class="movieseats-seat-area"
             >
                 <movable-view 
