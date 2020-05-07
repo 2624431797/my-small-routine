@@ -7,11 +7,11 @@
     "pages/Mine/index",
     "pages/AppCity/index",
     "pages/MovieDetail/index",
-    "pages/MoviePurchase/index",
     "pages/MationDetail/index",
-    "pages/AppPay/index",
+    "pages/MoviePurchase/index",
+    "pages/MovieSeats/index",
     "pages/MovieGood/index",
-    "pages/MovieSeats/index"
+    "pages/AppPay/index"
   ],
   "usingComponents": {
     "van-toast": "./miniprogram_npm/@vant/weapp/toast/index"

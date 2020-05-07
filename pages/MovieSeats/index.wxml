@@ -4,45 +4,133 @@
         <view class="movieseats-card"> 
             <view class="movieseats-card-container">
                 <view class="movieseats-card-container-tit">
-                    <text>三体2:黑暗森林</text>
-                    <span>{{filmPrice}} 元</span>
+                    <text>天醒之路</text>
+                    <span>{{obj.price}} 元</span>
                 </view>
                 <view class="movieseats-card-container-info">
-                    <text>国语3D</text>
+                    <text>{{obj.filmlanguage}}{{obj.imax}}</text>
                     <text>剧情 爱情 玄幻</text>
-                    <text>2021-1-22</text>
+                    <text>{{obj.endat}} 分钟</text>
                 </view>
             </view>
         </view>
         <!-- 卡片 -->
         <!-- 选座 -->
         <view class="movieseats-seat"> 
-            
+            <movable-area 
+                style="height: {{(seatRow * 40 + 350) + 'rpx'}}; width: 100vw; top:{{(rpxNum * 160) + 'px'}}" 
+                class="movieseats-seat-area"
+            >
+                <movable-view 
+                    style="width: 100vw; height: {{(seatRow * 40 + 400) + 'rpx'}};" 
+                    inertia="{{true}}" 
+                    scale="{{true}}" 
+                    scale-min="{{0.95}}" 
+                    scale-max="{{2}}" 
+                    direction="{{all}}"
+                    bindscale="handlerOnScale"
+                    bindchange="handlerOnMove" 
+                >
+                    <view class="movieseats-seat-area-hall">
+                        <text>{{obj.hallname}}</text>
+					</view>
+                    <view style="width: 240rpx; height: 48rpx;" class="movieseats-seat-area-screen">
+                        <text>银幕中央</text>
+                    </view>
+                    <view class="movieseats-seat-area-center" style="height: {{(seatRow * (20 + seatSize * pxNum)) + 'rpx'}}; top:165rpx; width: 0rpx"></view>
+					<view 
+                        class="movieseats-seat-area-content" 
+                        style="width: {{boxWidth + 'px'}}; height: {{seatSize + 'px'}}"
+                        wx:for="{{seatArray}}"
+                        wx:for-item="item"
+                        wx:for-index="index" 
+                        wx:key="id" 
+                    >
+                        <view 
+                            class="movieseats-seat-area-content-item" 
+                            style="width: {{seatSize + 2 + 'px'}}; height: {{seatSize + 2 + 'px'}}"
+                            wx:for="{{item}}"
+                            wx:for-item="seat"
+                            wx:for-index="col" 
+                            wx:key="id" 
+                            bindtap="handlerChooseSeat" 
+                            data-index="{{index}}"
+                            data-col="{{col}}"
+                        >
+                            <image wx:if="{{seat.type === 0}}" class="movieseats-seat-area-content-item-img" src="../../assets/images/unselected.png" mode="aspectFit"></image>
+                            <image wx:elif="{{seat.type === 1}}" class="movieseats-seat-area-content-item-img" src="../../assets/images/selected.png" mode="aspectFit"></image>
+                            <image wx:elif="{{seat.type === 2}}" class="movieseats-seat-area-content-item-img" src="../../assets/images/bought.png" mode="aspectFit"></image>
+                        </view>
+                    </view>
+                    <view class="movieseats-seat-area-number" style="left: {{(10 - moveX / scale) + 'px'}}; top: 158rpx; width:30rpx;">
+                        <view 
+                            class="movieseats-seat-area-number-item" 
+                            style="height: {{seatSize + 'px'}}; margin-top:20rpx;" 
+                            wx:for="{{mArr}}"
+                            wx:for-item="m"
+                            wx:for-index="mindex" 
+                            wx:key="mindex"
+                        >{{m}}</view>
+                        <view style="height: 20rpx;"></view>
+                    </view>
+                    <view class="movieseats-seat-area-tip">
+                        <view class="movieseats-seat-area-tip-item">
+                            <image style="width: {{seatSize + 2 + 'px'}}; height: {{seatSize + 2 + 'px'}};" src="../../assets/images/unselected.png" mode="aspectFit"></image>
+                            <span class="ml-10">可选</span>
+                        </view>
+                        <view class="movieseats-seat-area-tip-item">
+                            <image style="width: {{seatSize + 2 + 'px'}}; height: {{seatSize + 2 + 'px'}};" src="../../assets/images/bought.png" mode="aspectFit"></image>
+                            <span class="ml-10">不可选</span>
+                        </view>
+                        <view class="movieseats-seat-area-tip-item">
+                            <image style="width: {{seatSize + 2 + 'px'}}; height: {{seatSize + 2 + 'px'}};" src="../../assets/images/selected.png" mode="aspectFit"></image>
+                            <span class="ml-10">选中</span>
+                        </view>
+                    </view>
+                </movable-view>
+			</movable-area>
         </view>
         <!-- 选座 -->
         <!-- 按钮 -->
         <view class="movieseats-fixedbox"> 
-            <view wx:if="{{condition}}" class="movieseats-fixedbox-hide">
-                
-            </view>
-            <view class="movieseats-fixedbox-content">
+            <view class="movieseats-fixedbox-content" wx:if="{{SelectNum === 0}}">
                 <view class="movieseats-fixedbox-content-tit">
                     <text>推荐选座:</text>
                 </view>
                 <view class="movieseats-fixedbox-content-btn">
-                    <view class="movieseats-fixedbox-content-btn-item">
-                        <text>1人</text>
+                    <view 
+                        class="movieseats-fixedbox-content-btn-item"
+                        wx:for="{{4}}"
+                        wx:for-item="n"
+                        wx:for-index="numindex" 
+                        wx:key="numindex"
+                        bindtap="handlerSmartChoose"
+                        data-num="{{numindex + 1}}"
+                    >
+                        <text>{{numindex + 1}}人</text>
                     </view>
                 </view>
             </view>
+            <view class="movieseats-fixedbox-selected" wx:else>
+                <view class="movieseats-fixedbox-selected-tit">
+                    <text>已选座位:</text>
+                </view>
+                <view 
+                    class="movieseats-fixedbox-selected-item" 
+                    wx:for="{{optArr}}"
+                    wx:for-item="optItem"
+                    wx:for-index="optindex" 
+                    wx:key="optindex"
+                >
+                    {{ optItem.RowNum + '排' + optItem.ColumnNum + '座' }}
+                </view>
+            </view>
             <view class="movieseats-fixedbox-btn">
-                <view wx:if="{{!btnStatus}}" class="movieseats-fixedbox-btn-hide">
+                <view wx:if="{{!btnStatus}}" class="movieseats-fixedbox-btn-hide" wx:if="{{SelectNum === 0}}">
                     <text>请选座位</text>
                 </view>
-                <view wx:else class="movieseats-fixedbox-btn-show">
-                    <navigator url="">
-                        <text>确认座位</text>
-                    </navigator>
+                <view class="movieseats-fixedbox-btn-show" wx:else bindtap="handlerBuySeat">
+                    <text>{{'￥ '+ aPrice +' 确认座位'}}</text>
                 </view>
             </view>
         </view>

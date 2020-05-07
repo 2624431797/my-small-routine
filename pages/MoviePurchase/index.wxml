@@ -109,6 +109,10 @@
                                                 bindtap="handlerLinkSeats"
                                                 data-id="{{item.id}}"
                                                 data-price="{{item.price}}"
+                                                data-hallName="{{item.hallName}}"
+                                                data-filmLanguage="{{item.filmLanguage}}"
+                                                data-imax="{{item.imax}}"
+                                                data-endAt="{{item.endAt}}"
                                             >购票</a>
                                         </li>
                                     </ul>
@@ -143,6 +147,10 @@
                                                 bindtap="handlerLinkSeats"
                                                 data-id="{{item.id}}"
                                                 data-price="{{item.price}}"
+                                                data-hallName="{{item.hallName}}"
+                                                data-filmLanguage="{{item.filmLanguage}}"
+                                                data-imax="{{item.imax}}"
+                                                data-endAt="{{item.endAt}}"
                                             >购票</a>
                                         </li>
                                     </ul>
@@ -177,6 +185,10 @@
                                                 bindtap="handlerLinkSeats"
                                                 data-id="{{item.id}}"
                                                 data-price="{{item.price}}"
+                                                data-hallName="{{item.hallName}}"
+                                                data-filmLanguage="{{item.filmLanguage}}"
+                                                data-imax="{{item.imax}}"
+                                                data-endAt="{{item.endAt}}"
                                             >购票</a>
                                         </li>
                                     </ul>

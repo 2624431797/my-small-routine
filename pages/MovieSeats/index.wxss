@@ -1,9 +1,8 @@
 .movieseatsbox {
-  background: #f1f1f1;
+  background: #f7efef;
 }
 .movieseatsbox .movieseats {
   position: relative;
-  height: 100vh;
   /* 卡片 */
   /* 卡片 */
   /* 选座 */
@@ -13,6 +12,7 @@
 }
 .movieseatsbox .movieseats .movieseats-card {
   padding: 16rpx 24rpx;
+  background: #f1f1f1;
 }
 .movieseatsbox .movieseats .movieseats-card .movieseats-card-container {
   line-height: 64rpx;
@@ -37,6 +37,90 @@
   align-items: center;
   color: #666;
 }
+.movieseatsbox .movieseats .movieseats-seat {
+  height: 100%;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area {
+  position: fixed;
+  left: 0;
+  background: #f7efef;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-hall {
+  display: flex;
+  width: 380rpx;
+  height: 54rpx;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 24rpx;
+  font-weight: bold;
+  line-height: 54rpx;
+  color: #333;
+  transform: perspective(34rpx) rotateX(-10deg);
+  background-color: #dddddd;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 48rpx;
+  margin-bottom: 12rpx;
+  font-size: 22rpx;
+  color: #999999;
+  border: 1px solid #CCCCCC;
+  border-radius: 10rpx;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-center {
+  position: fixed;
+  border: 1px dashed #e5e5e5;
+  /* 定位垂直对齐 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-content .movieseats-seat-area-content-item {
+  display: inline-block;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-content .movieseats-seat-area-content-item .movieseats-seat-area-content-item-img {
+  width: 100%;
+  height: 100%;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-number {
+  position: fixed;
+  border-radius: 15rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-number .movieseats-seat-area-number-item {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 22rpx;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-tip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-tip .movieseats-seat-area-tip-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10rpx;
+}
+.movieseatsbox .movieseats .movieseats-seat .movieseats-seat-area .movieseats-seat-area-tip .movieseats-seat-area-tip-item .ml-10 {
+  margin-left: 10rpx;
+}
 .movieseatsbox .movieseats .movieseats-fixedbox {
   position: fixed;
   left: 0;
@@ -45,6 +129,27 @@
   padding: 16rpx 24rpx;
   margin-bottom: 20rpx;
   overflow: hidden;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-selected {
+  display: flex;
+  min-height: 80rpx;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10rpx 0rpx;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-selected .movieseats-fixedbox-selected-tit {
+  color: #333;
+  font-weight: bold;
+}
+.movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-selected .movieseats-fixedbox-selected-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  padding: 10rpx;
+  font-size: 28rpx;
+  border: 1px solid #CCCCCC;
+  border-radius: 10rpx;
 }
 .movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-content {
   height: 80rpx;
@@ -78,10 +183,12 @@
   height: 100rpx;
   justify-content: center;
   align-items: center;
+  margin-bottom: 24rpx;
+  background: #fff;
 }
 .movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-btn .movieseats-fixedbox-btn-hide,
 .movieseatsbox .movieseats .movieseats-fixedbox .movieseats-fixedbox-btn .movieseats-fixedbox-btn-show {
-  width: 80%;
+  width: 90%;
   height: 80rpx;
   color: #fff;
   font-size: 32rpx;

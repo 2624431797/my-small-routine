@@ -11,7 +11,11 @@
         <view class="apppay-way">
             <text class="apppay-way-tit">请选择支付方式:</text>
             <view class="apppay-way-pay">
-                <view class="apppay-way-pay-wechat">
+                <view 
+                    class="apppay-way-pay-wechat"
+                    bindtap="handlerWeChatPayWay"
+                    data-priceTotal="{{priceTotal}}"
+                >
                     <view class="apppay-way-pay-wechat-lable">
                         <image src="../../assets/images/wechat.png" />
                         <text>微信支付</text>

@@ -9,7 +9,7 @@
   height: 360rpx;
   justify-content: center;
   align-items: center;
-  margin: 80rpx;
+  padding: 80rpx;
   border-bottom: 1px solid #ccc;
 }
 .apploginbox .applogin .applogin-logo image {
