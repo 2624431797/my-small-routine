@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/Cinema/index",
     "pages/AppLogin/index",
     "pages/index/index",
-    "pages/Cinema/index",
     "pages/Mation/index",
     "pages/Mine/index",
     "pages/AppCity/index",
@@ -11,8 +11,14 @@
     "pages/MoviePurchase/index",
     "pages/MovieSeats/index",
     "pages/MovieGood/index",
-    "pages/AppPay/index"
+    "pages/AppPay/index",
+    "pages/CinemaDetail/index"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "usingComponents": {
     "van-toast": "./miniprogram_npm/@vant/weapp/toast/index"
   },
@@ -26,8 +32,7 @@
   "tabBar": {
     "color": "#333333",
     "selectedColor": "#ff5f16",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/index",
         "text": "推荐",
         "iconPath": "assets/icons/movie.png",

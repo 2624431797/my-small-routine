@@ -1,0 +1,77 @@
+.cinemadetailbox {
+  background: #fff;
+}
+.cinemadetailbox .cinemadetail {
+  position: relative;
+  height: 100%;
+  /* 留白 */
+  /* 留白 */
+  /* 卡片 */
+  /* 卡片 */
+  /* 地图 */
+  /* 地图 */
+}
+.cinemadetailbox .cinemadetail .cinemadetail-white {
+  color: #333;
+  background: #fff;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-white .van-icon-arrow-left,
+.cinemadetailbox .cinemadetail .cinemadetail-white .van-nav-bar__text {
+  color: #333!important;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-card {
+  padding: 24rpx 24rpx 4rpx;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-card .card-space {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-card .cinemadetail-card-title {
+  height: 88rpx;
+  text-align: center;
+  line-height: 88rpx;
+  font-size: 32rpx;
+  color: #191a1b;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-card .cinemadetail-card-info {
+  display: flex;
+  height: 80rpx;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-card .cinemadetail-card-info text {
+  font-size: 24rpx;
+  margin-right: 10rpx;
+  padding: 4rpx 10rpx;
+  color: #f90;
+  border: 1px solid #f90;
+  border-radius: 10rpx;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-card .cinemadetail-card-line {
+  display: flex;
+  height: 100rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-card .cinemadetail-card-line .cinemadetail-card-line-left,
+.cinemadetailbox .cinemadetail .cinemadetail-card .cinemadetail-card-line .cinemadetail-card-line-right {
+  display: flex;
+  width: 20%;
+  height: 100rpx;
+  justify-content: center;
+  align-items: center;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-card .cinemadetail-card-line .cinemadetail-card-line-left image,
+.cinemadetailbox .cinemadetail .cinemadetail-card .cinemadetail-card-line .cinemadetail-card-line-right image {
+  width: 40rpx;
+  height: 44rpx;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-map {
+  padding: 20rpx;
+  background: #fff;
+}
+.cinemadetailbox .cinemadetail .cinemadetail-map .cinemadetail-map-container {
+  border: 1px solid #ccc;
+}

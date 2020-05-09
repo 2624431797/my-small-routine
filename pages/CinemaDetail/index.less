@@ -1,0 +1,74 @@
+.cinemadetailbox{
+    background: #fff;
+    .cinemadetail{
+        position: relative;
+        height: 100%;
+        /* 留白 */
+        .cinemadetail-white{
+            color: #333;
+            background: #fff;
+            .van-icon-arrow-left, .van-nav-bar__text{
+                color: #333!important;
+            }
+        }
+        /* 留白 */
+        /* 卡片 */
+        .cinemadetail-card{
+            padding: 24rpx 24rpx 4rpx;
+            .card-space{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .cinemadetail-card-title{
+                height: 88rpx;
+                text-align: center;
+                line-height: 88rpx;
+                font-size: 32rpx;
+                color: #191a1b;
+            }
+            .cinemadetail-card-info{
+                display: flex;
+                height: 80rpx;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 20rpx;
+                text{
+                    font-size: 24rpx;
+                    margin-right: 10rpx;
+                    padding: 4rpx 10rpx;
+                    color: #f90;
+                    border: 1px solid #f90;
+                    border-radius: 10rpx;
+                }
+            }
+            .cinemadetail-card-line{
+                display: flex;
+                height: 100rpx;
+                justify-content: space-between;
+                align-items: center;
+                .cinemadetail-card-line-left, .cinemadetail-card-line-right{
+                    display: flex;
+                    width: 20%;
+                    height: 100rpx;
+                    justify-content: center;
+                    align-items: center;
+                    image{
+                        width: 40rpx;
+                        height: 44rpx;
+                    }
+                }
+            }
+        }
+        /* 卡片 */
+        /* 地图 */
+        .cinemadetail-map{
+            padding: 20rpx;
+            background: #fff;
+            .cinemadetail-map-container{
+                border: 1px solid #ccc;
+            }
+        }
+        /* 地图 */
+    }
+}

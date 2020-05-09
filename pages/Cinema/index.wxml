@@ -1,2 +1,69 @@
-<!--pages/Cinema/index.wxml-->
-<text>pages/Cinema/index.wxml</text>
+<view class="cinemabox">
+    <view class="cinema"> 
+        <!-- NoticeBar开始 -->
+        <view class="cinema-notice">
+            <van-notice-bar
+                left-icon="./static/horn.png"
+                text="{{noticeText}}"
+                mode="closeable"
+            />
+        </view>
+        <!-- NoticeBar结束 -->
+        <!-- topBar开始 -->
+        <view class="cinema-topbar">
+            <navigator url="/pages/AppCity/index" redirect>
+                <view class="cinema-topbar-city">
+                    <image src="../../assets/icons/cinema-position.png" />
+                    <text>{{nowCity}}</text>
+                </view>
+            </navigator>
+            <navigator url="">
+                <view class="cinema-topbar-search">
+                    <image src="../../assets/icons/cinema-search.png" />
+                </view>
+            </navigator>
+        </view>
+        <!-- topBar结束 -->
+        <!-- container开始 -->
+        <view class="cinema-container">
+            <van-tabs
+                active="1"
+                color="#ff5f16"
+                bind:change="handlerVanOnChange"
+            >
+                <van-tab
+                    wx:for="{{cinemalist}}"
+                    wx:for-item="citem"
+                    wx:key="id"
+                    name="{{citem.cid}}"
+                    title="{{citem.carea}}"
+                >
+                    <view 
+                        class="cinema-container-item"
+                        wx:for="{{citem.clist}}"
+                        wx:key="id"
+                    >
+                        <navigator url="/pages/CinemaDetail/index?id={{item.id}}">
+                            <view class="cinema-container-item-title">
+                                <text>{{item.title}}</text>
+                            </view>
+                            <view class="cinema-container-item-line">
+                                <text>{{item.area}}</text>
+                                <text>{{item.range}} km</text>
+                            </view>
+                            <view class="cinema-container-item-block">
+                                <text class="text-active-1">退</text>
+                                <text class="text-active-2">改签</text>
+                                <text class="text-active-1">小吃</text>
+                                <text wx:if="{{item.discard}}" class="text-active-2">折扣卡</text>
+                                <text wx:if="{{item.iFull}}" class="text-active-1">{{item.iFull}}</text>
+                                <text class="text-active-2">{{item.iMax}}厅</text>
+                            </view>
+                        </navigator>
+                    </view>
+                </van-tab>
+            </van-tabs>
+        </view>
+        <!-- container结束 -->
+    </view>
+</view>

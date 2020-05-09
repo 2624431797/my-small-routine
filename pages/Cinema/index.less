@@ -1,0 +1,79 @@
+.cinemabox{
+    background: #fff;
+    .cinema{
+        position: relative;
+        /* NoticeBar开始 */
+        .cinema-notice{
+            height: 100%;
+        }
+        /* NoticeBar结束 */
+        /* topBar开始 */
+        .cinema-topbar{
+            height: 80rpx;
+            padding: 0 30rpx;
+            .cinema-topbar-city, .cinema-topbar-search{
+                float: left;
+                display: flex;
+                height: 80rpx;
+                justify-content: center;
+                align-items: center;
+                image{
+                    width: 40rpx;
+                    height: 40rpx;
+                }
+                text{
+                    font-size: 28rpx;
+                    font-weight: bold;
+                    color: #333;
+                    margin-left: 20rpx;
+                }
+            }
+            .cinema-topbar-search{
+                float: right;
+            }
+        }
+        /* topBar结束 */
+        /* container开始 */
+        .cinema-container{
+            height: 100%;
+            .van-tab--active{
+                color: #ff5f16!important;
+            }
+            .cinema-container-item{
+                padding: 30rpx 40rpx;
+                .cinema-container-item-title{
+                    font-size: 32rpx;
+                    font-weight: bold;
+                    margin-bottom: 10rpx;
+                }
+                .cinema-container-item-line{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10rpx;
+                    color: #666;
+                    text{
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                }
+                .cinema-container-item-block{
+                    font-size: 24rpx;
+                    text{
+                        margin-right: 10rpx;
+                        padding: 4rpx 10rpx;
+                    }
+                    .text-active-1{
+                        color: #589daf;
+                        border: 1px solid #589daf;
+                    }
+                    .text-active-2{
+                        color: #f90;
+                        border: 1px solid #f90;
+                    }
+                }
+            }
+        }
+        /* container结束 */
+    }
+}

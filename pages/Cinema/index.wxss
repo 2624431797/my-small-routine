@@ -1,1 +1,82 @@
-/* pages/Cinema/index.wxss */
+.cinemabox {
+  background: #fff;
+}
+.cinemabox .cinema {
+  position: relative;
+  /* NoticeBar开始 */
+  /* NoticeBar结束 */
+  /* topBar开始 */
+  /* topBar结束 */
+  /* container开始 */
+  /* container结束 */
+}
+.cinemabox .cinema .cinema-notice {
+  height: 100%;
+}
+.cinemabox .cinema .cinema-topbar {
+  height: 80rpx;
+  padding: 0 30rpx;
+}
+.cinemabox .cinema .cinema-topbar .cinema-topbar-city,
+.cinemabox .cinema .cinema-topbar .cinema-topbar-search {
+  float: left;
+  display: flex;
+  height: 80rpx;
+  justify-content: center;
+  align-items: center;
+}
+.cinemabox .cinema .cinema-topbar .cinema-topbar-city image,
+.cinemabox .cinema .cinema-topbar .cinema-topbar-search image {
+  width: 40rpx;
+  height: 40rpx;
+}
+.cinemabox .cinema .cinema-topbar .cinema-topbar-city text,
+.cinemabox .cinema .cinema-topbar .cinema-topbar-search text {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-left: 20rpx;
+}
+.cinemabox .cinema .cinema-topbar .cinema-topbar-search {
+  float: right;
+}
+.cinemabox .cinema .cinema-container {
+  height: 100%;
+}
+.cinemabox .cinema .cinema-container .van-tab--active {
+  color: #ff5f16!important;
+}
+.cinemabox .cinema .cinema-container .cinema-container-item {
+  padding: 30rpx 40rpx;
+}
+.cinemabox .cinema .cinema-container .cinema-container-item .cinema-container-item-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.cinemabox .cinema .cinema-container .cinema-container-item .cinema-container-item-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+  color: #666;
+}
+.cinemabox .cinema .cinema-container .cinema-container-item .cinema-container-item-line text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.cinemabox .cinema .cinema-container .cinema-container-item .cinema-container-item-block {
+  font-size: 24rpx;
+}
+.cinemabox .cinema .cinema-container .cinema-container-item .cinema-container-item-block text {
+  margin-right: 10rpx;
+  padding: 4rpx 10rpx;
+}
+.cinemabox .cinema .cinema-container .cinema-container-item .cinema-container-item-block .text-active-1 {
+  color: #589daf;
+  border: 1px solid #589daf;
+}
+.cinemabox .cinema .cinema-container .cinema-container-item .cinema-container-item-block .text-active-2 {
+  color: #f90;
+  border: 1px solid #f90;
+}
