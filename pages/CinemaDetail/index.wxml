@@ -55,6 +55,9 @@
                     show-compass="{{showMap}}"
                     wx:if="{{showMap}}"
                 ></map>
+                <view class="map-circle" bindtap="handlerToLocation">
+                    <image src="../../assets/maps/map-circle.png" />
+                </view>
             </view>
         </view>
         <!-- 地图 -->

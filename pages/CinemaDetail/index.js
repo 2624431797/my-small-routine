@@ -11,8 +11,10 @@ Page({
   },
   onLoad(options) {
     this.handlerInitGetData(options.id)
+
+    this.mapCtx = wx.createMapContext("map")
   },
-  handlerBack() {
+  ToLocation() {
     wx.navigateBack({
       delta: 1
     })
@@ -73,6 +75,9 @@ Page({
         })
       }
     })
+  },
+  handlerToLocation(){
+    this.mapCtx.moveToLocation()
   },
   //点击标记点时触发
   markertap(e) {
