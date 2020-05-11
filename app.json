@@ -1,18 +1,18 @@
 {
   "pages": [
-    "pages/Cinema/index",
     "pages/AppLogin/index",
     "pages/index/index",
+    "pages/Cinema/index",
     "pages/Mation/index",
     "pages/Mine/index",
     "pages/AppCity/index",
     "pages/MovieDetail/index",
+    "pages/CinemaDetail/index",
     "pages/MationDetail/index",
     "pages/MoviePurchase/index",
     "pages/MovieSeats/index",
     "pages/MovieGood/index",
-    "pages/AppPay/index",
-    "pages/CinemaDetail/index"
+    "pages/AppPay/index"
   ],
   "permission": {
     "scope.userLocation": {
